@@ -3,11 +3,11 @@
 # ----------------------- #
 
 url: http://superzhang.github.com
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
+title: Castiel Blog
+subtitle: IT 科技和生活.
+author: Castiel
 simple_search: http://google.com/search
-description:
+description: 科技IT旅行生活
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
