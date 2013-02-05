@@ -1,10 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://superzhang.github.com/blog/2013/02/05/post-title/</loc>
-        <lastmod>2013-02-05T17:02:14+08:00</lastmod>
-    </url>
-    <url>
         <loc>http://superzhang.github.com/blog/2013/02/05/hello-ruby/</loc>
         <lastmod>2013-02-05T17:21:38+08:00</lastmod>
     </url>
