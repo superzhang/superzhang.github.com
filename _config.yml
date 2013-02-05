@@ -97,3 +97,10 @@ google_analytics_tracking_id:
 
 # Facebook Like
 facebook_like: false
+
+#Weibo
+weibo_uid: 1312803254
+weibo_verifier: 491a9449
+weibo_fasline: 0
+weibo_pic: true
+weibo_skin: 10
