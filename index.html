@@ -130,7 +130,70 @@
   </header>
 
 
-  <div class="entry-content">
+  <div class="entry-content"><p>今年一直推荐的一种写作方式。markdown语法快速成文，git与github实时保存，jekyll或octopress实时成书或者showoff实时成ppt。入门略有门槛，但是习惯了，写作效率会好很多。以下以octopress为例，进行说明。</p>
+
+<p>配置个人github账号</p>
+
+<p>登陆github，创建一个个人账号。假设叫做：rubyonchina。</p>
+
+<p>然后回到ubuntu或者Mac里面，仍然是在终端里面，输入：</p>
+
+<p> [[ -f ~/.ssh/id_rsa.pub ]] || ssh-keygen -t rsa
+按照默认提示一路确认，生成密钥之后，将生成的信息复制到github页面中，如下所示：</p>
+
+<p> [[ -f ~/.ssh/id_rsa.pub ]] &amp;&amp; cat ~/.ssh/id_rsa.pub | xclip
+然后在浏览器中打开页面：</p>
+
+<p>https://github.com/account/ssh</p>
+
+<p>点击，Add another public key，粘贴前面步骤复制的信息，请格外注意，不要在Title中填写内容，直接将复制的内容粘贴到Key中，然后点击：Add Key即可。</p>
+
+<p>配置octopress个人博客</p>
+
+<p>cd ~/dev/
+git clone git://github.com/imathis/octopress.git rubyonchina.github.com
+cd ~/dev/rubyonchina.github.com
+修改默认的.rvmrc文件的内容为：</p>
+
+<p>rvm use 1.9.2@rails31
+安装相应的gem:</p>
+
+<p>bundle update
+然后生成模版文件：</p>
+
+<p>rake install
+分发到github上。分发之前，假设你已经注册用户名为rubyonchina的github.com账号，已经创建名为rubyonchina.github.com项目。</p>
+
+<p>cd ~/dev/rubyonchina.github.com
+git remote add rubyonchina git@github.com:rubyonchina/rubyonchina.github.com.git
+新增一篇测试博客：</p>
+
+<p>rake new_post[&#8220;post title&#8221;]
+生成静态站点：</p>
+
+<p>rake generate
+配置octopress与github的连接：</p>
+
+<p>rake setup_github_pages
+按照提示填入你的github项目网址，比如，本示例是：</p>
+
+<p>git@github.com:rubyonchina/rubyonchina.github.com.git
+分发到github上：</p>
+
+<p>rake deploy
+第一次运行时，会询问是否建立对github的授权，输入：yes。然后将站点更新的内容推送到github上。</p>
+
+<p>git push -u rubyonchina master
+尝试浏览，</p>
+
+<p>http://rubyonchina.github.com</p>
+
+<p>OK！成功！然后，此时，再创建一个新的github的source分支，用于保存写作的md源文件等。</p>
+
+<p>git add .
+git commit -m &#8220;some changes&#8221;
+git push rubyonchina source
+现在，你就拥有了一个强大的个人站点。</p>
 </div>
   
   
