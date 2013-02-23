@@ -5,12 +5,17 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>test - Castiel Blog</title>
+  <title>.net微信公众平台接口代码 - Castiel Blog</title>
   <meta name="author" content="Castiel">
 
   
-  <meta name="description" content="This is a test blog
-">
+  <meta name="description" content="sing System;
+using System.Configuration;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI; &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -68,7 +73,7 @@
   
   <header>
     
-      <h1 class="entry-title">Test</h1>
+      <h1 class="entry-title">.net微信公众平台接口代码</h1>
     
     
       <p class="meta">
@@ -91,7 +96,169 @@
   </header>
 
 
-<div class="entry-content"><p>This is a test blog</p>
+<div class="entry-content"><p>sing System;
+using System.Configuration;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Xml.Linq;
+using System.IO;
+using System.Xml;
+using System.Text;
+using System.Data.SqlClient;
+using System.Data;</p>
+
+<p>namespace Web.UI
+{</p>
+
+<pre><code>public partial class Weixin : System.Web.UI.Page
+{
+    const string Token = "token";       //你的token
+    protected string strJson = "";
+    protected string DefaultOrganise;
+    Lib.SqlHelper sqlHelper = new Lib.SqlHelper();
+    string Connectionstring = @"Data Source=192.100.60.122;Initial catalog=appdevtestdb;UID=sa;pwd=ZBJT0049admin;";//替换
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        string postStr = "";
+       // Valid();                        //验证通过后可删除此行代码
+        if (Request.HttpMethod.ToLower() == "post")
+        {
+            Stream s = System.Web.HttpContext.Current.Request.InputStream;
+            byte[] b = new byte[s.Length];
+            s.Read(b, 0, (int)s.Length);
+            postStr = Encoding.UTF8.GetString(b);
+            if (!string.IsNullOrEmpty(postStr))
+            {
+                ResponseMsg(postStr);
+
+            }
+
+        }
+    }
+
+    /// &lt;summary&gt;
+    /// 返回信息结果(微信信息返回)
+    /// &lt;/summary&gt;
+    /// &lt;param name="weixinXML"&gt;&lt;/param&gt;
+    private void ResponseMsg(string weixinXML)
+    {
+        //回复消息的部分:你的代码写在这里
+        XmlDocument doc = new XmlDocument();
+        doc.LoadXml(weixinXML);
+        XmlNodeList list = doc.GetElementsByTagName("xml");
+        XmlNode xn = list[0];
+        string FromUserName = xn.SelectSingleNode("//FromUserName").InnerText;
+        string ToUserName = xn.SelectSingleNode("//ToUserName").InnerText;
+        string content = "";
+        content = xn.SelectSingleNode("//Content").InnerText;
+        //string content = "";// doc.GetElementsByTagName("content").Item(0).ToString();
+
+        if (content.Equals("Hello2BizUser"))
+        {
+            content = "欢迎关注!";
+        }
+
+        else 
+        {
+
+            content = "现在是北京时间：" + string.Format("{0:f}", DateTime.Now);
+        }
+        string strresponse = "&lt;xml&gt;";
+        strresponse = strresponse + "&lt;ToUserName&gt;&lt;![CDATA[" + FromUserName + "]]&gt;&lt;/ToUserName&gt;";
+        strresponse = strresponse + "&lt;FromUserName&gt;&lt;![CDATA[" + ToUserName + "]]&gt;&lt;/FromUserName&gt;";
+        strresponse = strresponse + "&lt;CreateTime&gt;" + DateTime.Now.Ticks.ToString() + "&lt;/CreateTime&gt;";
+        strresponse = strresponse + "&lt;MsgType&gt;&lt;![CDATA[text]]&gt;&lt;/MsgType&gt;";
+        strresponse = strresponse + "&lt;Content&gt;&lt;![CDATA[" + content + "]]&gt;&lt;/Content&gt;";
+        strresponse = strresponse + "&lt;FuncFlag&gt;0&lt;FuncFlag&gt;";
+        strresponse = strresponse + "&lt;/xml&gt;";
+        WriteLog("postStr:" + content);
+        Response.Write(strresponse);
+    }
+    /// &lt;summary&gt;
+          /// &lt;summary&gt;
+    /// 写日志(用于跟踪)
+    /// &lt;/summary&gt;
+    private void WriteLog(string strMemo)
+    {
+        if (!Directory.Exists(Server.MapPath(@"logs\")))
+        {
+            Directory.CreateDirectory(Server.MapPath(@"logs\"));
+        }
+        string filename = Server.MapPath(@"logs/log.txt");
+        StreamWriter sr = null;
+        try
+        {
+            if (!File.Exists(filename))
+            {
+                sr = File.CreateText(filename);
+            }
+            else
+            {
+                sr = File.AppendText(filename);
+            }
+            sr.WriteLine(strMemo);
+        }
+        catch
+        {
+        }
+        finally
+        {
+            if (sr != null)
+                sr.Close();
+        }
+    }
+
+    /// &lt;summary&gt;
+    /// 验证微信签名
+    /// &lt;/summary&gt;
+    /// * 将token、timestamp、nonce三个参数进行字典序排序
+    /// * 将三个参数字符串拼接成一个字符串进行sha1加密
+    /// * 开发者获得加密后的字符串可与signature对比，标识该请求来源于微信。
+    /// &lt;returns&gt;&lt;/returns&gt;
+    private bool CheckSignature()
+    {
+        string signature = Request.QueryString["signature"].ToString();
+        string timestamp = Request.QueryString["timestamp"].ToString();
+        string nonce = Request.QueryString["nonce"].ToString();
+        string[] ArrTmp = { Token, timestamp, nonce };
+        Array.Sort(ArrTmp);     //字典排序
+        string tmpStr = string.Join("", ArrTmp);
+        tmpStr = FormsAuthentication.HashPasswordForStoringInConfigFile(tmpStr, "SHA1");
+        tmpStr = tmpStr.ToLower();
+        if (tmpStr.Equals(signature))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    /// &lt;summary&gt;
+    /// 验证
+    /// &lt;/summary&gt;
+    private void Valid()
+    {
+        string echoStr = Request.QueryString["echoStr"].ToString();
+        if (CheckSignature())
+        {
+            if (!string.IsNullOrEmpty(echoStr))
+            {
+                Response.Write(echoStr);
+                Response.End();
+            }
+        }
+    }
+}
+</code></pre>
+
+<p>}</p>
 </div>
 
 
@@ -147,7 +314,7 @@
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2013/02/23/test/">test</a>
+        <a href="/blog/2013/02/23/test/">.net微信公众平台接口代码</a>
       </li>
     
       <li class="post">
