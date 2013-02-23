@@ -4,7 +4,7 @@
   <title><![CDATA[Castiel Blog]]></title>
   <link href="http://superzhang.github.com/atom.xml" rel="self"/>
   <link href="http://superzhang.github.com/"/>
-  <updated>2013-02-19T19:22:34+08:00</updated>
+  <updated>2013-02-23T13:43:17+08:00</updated>
   <id>http://superzhang.github.com/</id>
   <author>
     <name><![CDATA[Castiel]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[test]]></title>
+    <link href="http://superzhang.github.com/blog/2013/02/23/test/"/>
+    <updated>2013-02-23T12:33:00+08:00</updated>
+    <id>http://superzhang.github.com/blog/2013/02/23/test</id>
+    <content type="html"><![CDATA[<p>This is a test blog</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[中文测试]]></title>
@@ -23,12 +32,11 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[hello ruby]]></title>
+    <title type="html"><![CDATA[正式安家]]></title>
     <link href="http://superzhang.github.com/blog/2013/02/05/hello-ruby/"/>
     <updated>2013-02-05T17:19:00+08:00</updated>
     <id>http://superzhang.github.com/blog/2013/02/05/hello-ruby</id>
-    <content type="html"><![CDATA[<p>hello ruby</p>
-
+    <content type="html"><![CDATA[<p>过年期间，由于闲的蛋疼，开始各种折腾，很早看到有人在github上搭建博客，然后就开始各种尝试,终于经过不懈的努力，弄好了。感觉像搬新家一样的兴奋。我会在这里给大家分享技术，生活，各种事情。</p>
 ]]></content>
   </entry>
   

@@ -2,19 +2,23 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://superzhang.github.com/blog/2013/02/05/hello-ruby/</loc>
-        <lastmod>2013-02-05T17:21:38+08:00</lastmod>
+        <lastmod>2013-02-23T13:43:06+08:00</lastmod>
     </url>
     <url>
         <loc>http://superzhang.github.com/blog/2013/02/19/zhong-wen-ce-shi/</loc>
         <lastmod>2013-02-19T18:06:50+08:00</lastmod>
     </url>
     <url>
+        <loc>http://superzhang.github.com/blog/2013/02/23/test/</loc>
+        <lastmod>2013-02-23T13:09:25+08:00</lastmod>
+    </url>
+    <url>
         <loc>http://superzhang.github.com/blog/archives/</loc>
-        <lastmod>2013-02-19T18:06:50+08:00</lastmod>
+        <lastmod>2013-02-23T13:43:06+08:00</lastmod>
     </url>
     <url>
         <loc>http://superzhang.github.com/</loc>
-        <lastmod>2013-02-19T18:06:50+08:00</lastmod>
+        <lastmod>2013-02-23T13:43:06+08:00</lastmod>
     </url>
     <url>
         <loc>http://superzhang.github.com/robots.txt</loc>
