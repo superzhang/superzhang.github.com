@@ -4,7 +4,7 @@
   <title><![CDATA[Castiel Blog]]></title>
   <link href="http://superzhang.github.com/atom.xml" rel="self"/>
   <link href="http://superzhang.github.com/"/>
-  <updated>2013-02-23T13:46:11+08:00</updated>
+  <updated>2013-02-23T13:48:11+08:00</updated>
   <id>http://superzhang.github.com/</id>
   <author>
     <name><![CDATA[Castiel]]></name>
@@ -23,7 +23,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[中文测试]]></title>
+    <title type="html"><![CDATA[octopress--像黑客一样写博客]]></title>
     <link href="http://superzhang.github.com/blog/2013/02/19/zhong-wen-ce-shi/"/>
     <updated>2013-02-19T18:06:00+08:00</updated>
     <id>http://superzhang.github.com/blog/2013/02/19/zhong-wen-ce-shi</id>
