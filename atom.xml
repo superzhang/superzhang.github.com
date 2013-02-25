@@ -4,7 +4,7 @@
   <title><![CDATA[Castiel Blog]]></title>
   <link href="http://superzhang.github.com/atom.xml" rel="self"/>
   <link href="http://superzhang.github.com/"/>
-  <updated>2013-02-25T19:36:18+08:00</updated>
+  <updated>2013-02-25T19:37:37+08:00</updated>
   <id>http://superzhang.github.com/</id>
   <author>
     <name><![CDATA[Castiel]]></name>
@@ -266,8 +266,10 @@ WB相关主题
     <link href="http://superzhang.github.com/blog/2013/02/23/test/"/>
     <updated>2013-02-23T12:33:00+08:00</updated>
     <id>http://superzhang.github.com/blog/2013/02/23/test</id>
-    <content type="html"><![CDATA[<p>using System;
-using System.Configuration;
+    <content type="html"><![CDATA[<br>using System;
+
+
+<p>using System.Configuration;
 using System.Data;
 using System.Linq;
 using System.Web;
@@ -282,6 +284,9 @@ using System.Xml;
 using System.Text;
 using System.Data.SqlClient;
 using System.Data;</p>
+
+<br>
+
 
 <p>namespace Web.UI
 {</p>
