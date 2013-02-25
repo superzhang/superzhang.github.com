@@ -4,7 +4,7 @@
   <title><![CDATA[Castiel Blog]]></title>
   <link href="http://superzhang.github.com/atom.xml" rel="self"/>
   <link href="http://superzhang.github.com/"/>
-  <updated>2013-02-25T14:51:59+08:00</updated>
+  <updated>2013-02-25T14:54:48+08:00</updated>
   <id>http://superzhang.github.com/</id>
   <author>
     <name><![CDATA[Castiel]]></name>
@@ -14,11 +14,11 @@
 
   
   <entry>
-    <title type="html"><![CDATA[ios systme directory]]></title>
+    <title type="html"><![CDATA[ios 系统目录描述]]></title>
     <link href="http://superzhang.github.com/blog/2013/02/25/ios-systme-directory/"/>
     <updated>2013-02-25T14:50:00+08:00</updated>
     <id>http://superzhang.github.com/blog/2013/02/25/ios-systme-directory</id>
-    <content type="html"><![CDATA[<p>iOS常用目录整理说明是本文要介绍的内容，虽然不同API全面，也算是在编程中常用到的存放目录，所以是必备文档，不多说，来看详细内容讲解。
+    <content type="html"><![CDATA[<p>iOS常用目录整理
 1、【/Applications】
 常用软件的安装目录 内建软体及JB软体存放位置
 2. 【/private /var/ mobile/Media /iphone video Recorder】
