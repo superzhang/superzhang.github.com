@@ -4,7 +4,7 @@
   <title><![CDATA[Castiel Blog]]></title>
   <link href="http://superzhang.github.com/atom.xml" rel="self"/>
   <link href="http://superzhang.github.com/"/>
-  <updated>2013-02-25T16:28:58+08:00</updated>
+  <updated>2013-02-25T16:36:32+08:00</updated>
   <id>http://superzhang.github.com/</id>
   <author>
     <name><![CDATA[Castiel]]></name>
@@ -31,9 +31,7 @@
     <link href="http://superzhang.github.com/blog/2013/02/25/ios-systme-directory/"/>
     <updated>2013-02-25T14:50:00+08:00</updated>
     <id>http://superzhang.github.com/blog/2013/02/25/ios-systme-directory</id>
-    <content type="html"><![CDATA[<h1>iOS常用目录整理</h1>
-
-<blockquote><p>1、【/Applications】
+    <content type="html"><![CDATA[<p>1、【/Applications】
 常用软件的安装目录 内建软体及JB软体存放位置
 2. 【/private /var/ mobile/Media /iphone video Recorder】
 录像文件存放目录
@@ -123,8 +121,7 @@ system/library/Frameworks/UIKit.framework/Other.artwork 
 移动：改彩色的文件名为：Default_CARRIER_CHINAMOBILE.png
 改黑白的文件名为：FSO_CARRIER_CHINAMOBILE.png
 联通：改彩色的文件名为：Default_CARRIER_CHINAUNICOM.png
-改黑白的文件名为：FSO_CARRIER_CHINAUNICOM.png
-小结：必备文档：iOS常用目录整理说明的内容介绍完了，希望通过本文的学习能对你有所帮助！</p></blockquote>
+改黑白的文件名为：FSO_CARRIER_CHINAUNICOM.png</p>
 ]]></content>
   </entry>
   
