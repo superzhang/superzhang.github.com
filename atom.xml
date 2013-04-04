@@ -4,7 +4,7 @@
   <title><![CDATA[Castiel Blog]]></title>
   <link href="http://superzhang.github.com/atom.xml" rel="self"/>
   <link href="http://superzhang.github.com/"/>
-  <updated>2013-03-09T17:35:41+08:00</updated>
+  <updated>2013-04-05T00:11:49+08:00</updated>
   <id>http://superzhang.github.com/</id>
   <author>
     <name><![CDATA[Castiel]]></name>
@@ -12,6 +12,23 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[老罗，锤子科技和他的情怀]]></title>
+    <link href="http://superzhang.github.com/blog/2013/04/04/lao-luo-%2Ccui-zhui-zi-ke-ji-he-ta-de-qing-huai/"/>
+    <updated>2013-04-04T23:47:00+08:00</updated>
+    <id>http://superzhang.github.com/blog/2013/04/04/lao-luo-,cui-zhui-zi-ke-ji-he-ta-de-qing-huai</id>
+    <content type="html"><![CDATA[<p>昨天晚上把老罗的锤子科技rom发布会的官方视频看了下，跟之前的报道感觉完全不一样。图文的报道根本体现不出老罗的情怀。</p>
+
+<p>老罗说的好，在可以和人文的路上，我只看到了乔布斯的坟墓孤零零的立在那里。iPhone的出现，改变了我们的生活，改变了手机行业，改变了审美，改变了设计，也改变了我的人生。如果不是对iphone的喜欢，我估计还不知道去做什么。之前也尝试过做安卓的开发，但是，写了个hello world以后就放弃了。可以说给ios系统写程序也是一种享受。</p>
+
+<p>现在有多少公司能想老罗这样，能那么有情怀，能做出那么多细节的改进，那么多人性化的设计，为了这个rom，我都打算去尝试安卓的手机了，之前让我冲动的也只有小米，不过后来，鼓动室友买了，尝试了下，也就没入手了。安卓的体验还是比苹果差很多。</p>
+
+<p>老罗说：他是在用生命说牛逼的人。我最近在思考，到底是个怎么样的经历，能出这么样的一个人，高中没毕业，去新东方学英语，然后任教，再出来自创英语培训，再创立锥子科技公司。你总会发现，他是越来越厉害，越来越让你欣赏佩服。</p>
+
+<p>最近在微信上看到一些公众账号的大牛说，年前的时候真应该多看书，多旅行。我觉的确实是，走过的地方多了，你会开阔眼界，看的说多了，你开阔思路。人的一生不应该按部就班，而应该多点不一样的色彩。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Git 常用命令备忘]]></title>
