@@ -4,7 +4,7 @@
   <title><![CDATA[Castiel Blog]]></title>
   <link href="http://superzhang.github.com/atom.xml" rel="self"/>
   <link href="http://superzhang.github.com/"/>
-  <updated>2013-04-05T00:11:49+08:00</updated>
+  <updated>2013-06-05T16:27:33+08:00</updated>
   <id>http://superzhang.github.com/</id>
   <author>
     <name><![CDATA[Castiel]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[title]]></title>
+    <link href="http://superzhang.github.com/blog/2013/06/05/title/"/>
+    <updated>2013-06-05T16:26:00+08:00</updated>
+    <id>http://superzhang.github.com/blog/2013/06/05/title</id>
+    <content type="html"><![CDATA[<p>test</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[老罗，锤子科技和他的情怀]]></title>
