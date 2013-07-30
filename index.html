@@ -1,99 +1,106 @@
 
-<!DOCTYPE html>
-<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
-<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<!DOCTYPE HTML>
+<html>
 <head>
-  <meta charset="utf-8">
-  <title>Castiel Blog</title>
-  <meta name="author" content="Castiel">
+	<meta charset="utf-8">
+	<title>Castiel Blog</title>
+	<meta name="author" content="Castiel">
 
-  
-  <meta name="description" content="使用Sublime Text2编辑器的同学应该都知道，几乎所有的功能都可以通过快捷键进行。系统默认的快捷键可以通过Preferences -> Key Bindings – Default查看。但对于插件的快捷键查看就没这么简单了，有些插件将一些信息写到Sublime-Menu下还可以方便查看， &hellip;">
-  
+	
+	<meta name="description" content="使用Sublime Text2编辑器的同学应该都知道，几乎所有的功能都可以通过快捷键进行。系统默认的快捷键可以通过Preferences -> Key Bindings – Default查看。但对于插件的快捷键查看就没这么简单了，有些插件将一些信息写到Sublime-Menu下还可以方便查看， &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <!-- http://t.co/dKP3o1e -->
-  <meta name="HandheldFriendly" content="True">
-  <meta name="MobileOptimized" content="320">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  
-  <link rel="canonical" href="http://superzhang.github.com/">
-  <link href="/favicon.png" rel="icon">
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="/javascripts/ender.js"></script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <link href="/atom.xml" rel="alternate" title="Castiel Blog" type="application/atom+xml">
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-
-  
-
+	<link href="/atom.xml" rel="alternate" title="Castiel Blog" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script async="true" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
 </head>
 
-<body   >
-  <header role="banner"><hgroup>
-  <h1><a href="/">Castiel Blog</a></h1>
-  
-    <h2>IT 科技和生活.</h2>
-  
-</hgroup>
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">Castiel Blog</a></h1>
+<nav id="main-nav"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul class="main">
+	<li><a href="/">Blog</a></li>
+	<li><a href="/blog/archives">Archives</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="http://google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:superzhang.github.com">
+			</form>
+		</div>
+	</div>
+</nav>
+<nav id="sub-nav" class="alignright">
+	<div class="social">
+		
+		
+		
+		<a class="twitter" href="http://twitter.com/superupon" title="Twitter">Twitter</a>
+		
+		
+    
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+    
+	</div>
+	<form class="search" action="http://google.com/search" method="get">
+		<input class="alignright" type="text" name="q" results="0">
+		<input type="hidden" name="q" value="site:superzhang.github.com">
+	</form>
+</nav>
 
 </header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
-  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  
-</ul>
-  
-<form action="http://google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:superzhang.github.com" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-<ul class="main-navigation">
-  <li><a href="/">Blog</a></li>
-  <li><a href="/blog/archives">Archives</a></li>
-</ul>
+	
+		
+<div id="banner" class="inner">
+	<div class="container">
+		<ul class="feed"></ul>
+	</div>
+	<small><a href="http://twitter.com/superupon">superupon</a> @ <a href="http://twitter.com">Twitter</a></small>
+	<div class="loading">Loading...</div>
+</div>
+<script src="/javascripts/twitter.js"></script>
+<script type="text/javascript">
+	(function($){
+		$('#banner').getTwitterFeed('superupon', 1, false);
+	})(jQuery);
+</script>
 
-</nav>
-  <div id="main">
-    <div id="content">
-      <div class="blog-index">
-  
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/06/05/title/">使用KeymapManager管理Sublime Text2插件的快捷键</a></h1>
-    
-    
-      <p class="meta">
-        
+	
+	<div id="content" class="inner">
 
 
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-06-05T16:26:00+08:00" pubdate data-updated="true">Jun 5<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>使用Sublime Text2编辑器的同学应该都知道，几乎所有的功能都可以通过快捷键进行。系统默认的快捷键可以通过Preferences -> Key Bindings – Default查看。但对于插件的快捷键查看就没这么简单了，有些插件将一些信息写到Sublime-Menu下还可以方便查看，但很多插件都没写Sublime Menu的信息，这个时候如果忘记了快捷键，那只能找到对应的插件目录，打开对应的文件查看了。</p>
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2013/06/05/title/">
+		
+			使用KeymapManager管理Sublime Text2插件的快捷键</a>
+	</h2>
+	<div class="entry-content">
+		<p>使用Sublime Text2编辑器的同学应该都知道，几乎所有的功能都可以通过快捷键进行。系统默认的快捷键可以通过Preferences -> Key Bindings – Default查看。但对于插件的快捷键查看就没这么简单了，有些插件将一些信息写到Sublime-Menu下还可以方便查看，但很多插件都没写Sublime Menu的信息，这个时候如果忘记了快捷键，那只能找到对应的插件目录，打开对应的文件查看了。</p>
 
 <p>为了解决这个问题，让所有安装的插件可以很方便的管理，开发了KeymapManager这个插件。</p>
 
@@ -104,42 +111,47 @@
 
 <p>使用方式
 通过ctrl + alt + k 或者通过顶部菜单 View -> Keymap Manager打开Pannel。</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-06-05T16:26:00+08:00" pubdate data-updated="true">Jun 5<span>th</span>, 2013</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/开发/'>开发</a>
+
+
 </div>
-  
-  
+	
+</div>
+</article>
 
 
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/04/04/lao-luo-%2Ccui-zhui-zi-ke-ji-he-ta-de-qing-huai/">老罗，锤子科技和他的情怀</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-04-04T23:47:00+08:00" pubdate data-updated="true">Apr 4<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>昨天晚上把老罗的锤子科技rom发布会的官方视频看了下，跟之前的报道感觉完全不一样。图文的报道根本体现不出老罗的情怀。</p>
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2013/04/04/lao-luo-%2Ccui-zhui-zi-ke-ji-he-ta-de-qing-huai/">
+		
+			老罗，锤子科技和他的情怀</a>
+	</h2>
+	<div class="entry-content">
+		<p>昨天晚上把老罗的锤子科技rom发布会的官方视频看了下，跟之前的报道感觉完全不一样。图文的报道根本体现不出老罗的情怀。</p>
 
 <p>老罗说的好，在可以和人文的路上，我只看到了乔布斯的坟墓孤零零的立在那里。iPhone的出现，改变了我们的生活，改变了手机行业，改变了审美，改变了设计，也改变了我的人生。如果不是对iphone的喜欢，我估计还不知道去做什么。之前也尝试过做安卓的开发，但是，写了个hello world以后就放弃了。可以说给ios系统写程序也是一种享受。</p>
 
@@ -148,42 +160,47 @@
 <p>老罗说：他是在用生命说牛逼的人。我最近在思考，到底是个怎么样的经历，能出这么样的一个人，高中没毕业，去新东方学英语，然后任教，再出来自创英语培训，再创立锥子科技公司。你总会发现，他是越来越厉害，越来越让你欣赏佩服。</p>
 
 <p>最近在微信上看到一些公众账号的大牛说，年前的时候真应该多看书，多旅行。我觉的确实是，走过的地方多了，你会开阔眼界，看的说多了，你开阔思路。人的一生不应该按部就班，而应该多点不一样的色彩。</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-04-04T23:47:00+08:00" pubdate data-updated="true">Apr 4<span>th</span>, 2013</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/科技/'>科技</a>
+
+
 </div>
-  
-  
+	
+</div>
+</article>
 
 
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/03/09/git-chang-yong-ming-ling-bei-wang/">Git 常用命令备忘</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-03-09T17:17:00+08:00" pubdate data-updated="true">Mar 9<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Git配置</p>
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2013/03/09/git-chang-yong-ming-ling-bei-wang/">
+		
+			Git 常用命令备忘</a>
+	</h2>
+	<div class="entry-content">
+		<p>Git配置</p>
 
 <pre><code>git config --global user.name "robbin"   
 git config --global user.email "fankai@gmail.com"
@@ -345,42 +362,47 @@ git branch --set-upstream develop origin/develop</pre>
 
 
 <p></code></p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-03-09T17:17:00+08:00" pubdate data-updated="true">Mar 9<span>th</span>, 2013</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/git/'>Git</a>
+
+
 </div>
-  
-  
+	
+</div>
+</article>
 
 
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/02/28/vimcha-jian-pei-zhi/">Vim插件配置</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-02-28T21:06:00+08:00" pubdate data-updated="true">Feb 28<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>看到别人的博客介绍Vundle之前，我用Pathogen管理插件。Pathogen还算方便，只需要把相应插件，放在bundle目录下即可，不需要很复杂的设置，管理起来也一目了然，而且当第一次使用vim的时候，你会觉的很容易上手。</p>
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2013/02/28/vimcha-jian-pei-zhi/">
+		
+			Vim插件配置</a>
+	</h2>
+	<div class="entry-content">
+		<p>看到别人的博客介绍Vundle之前，我用Pathogen管理插件。Pathogen还算方便，只需要把相应插件，放在bundle目录下即可，不需要很复杂的设置，管理起来也一目了然，而且当第一次使用vim的时候，你会觉的很容易上手。</p>
 
 <p>感谢现在的互联网，能让我看到很多好的东西，能让我很容易能上手神奇vim，如果没有那么多插件，vim只能觉的很普通一样。Vundel的插件安装逻辑结构是这样的：</p>
 
@@ -477,42 +499,43 @@ Bundle 'Valloric/YouCompleteMe'
 
 
 <p></code></p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-02-28T21:06:00+08:00" pubdate data-updated="true">Feb 28<span>th</span>, 2013</time></div>
+	<div class="tags">
+
 </div>
-  
-  
+	
+</div>
+</article>
 
 
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/02/27/bu-xiang-zhuang-bi-de-sha-bi-bu-shi-hao-er-bi/">不想装逼的傻逼不是好二逼(转)</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-02-27T22:02:00+08:00" pubdate data-updated="true">Feb 27<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p><a href="http://lihuazhi.com/561">原文</a>
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2013/02/27/bu-xiang-zhuang-bi-de-sha-bi-bu-shi-hao-er-bi/">
+		
+			不想装逼的傻逼不是好二逼(转)</a>
+	</h2>
+	<div class="entry-content">
+		<p><a href="http://lihuazhi.com/561">原文</a>
    <br>你受过良好的教育，有意无意间说起自己的大学，旁人无一例外纷纷投来艳羡目光。你工作光鲜，不是四大就是4A，不是垄断国企就是全球500强；在一个都是中国人的公司里互相叫对方英文名。你衣食无忧，三个月工资买一LV包；你生活清闲，上班时就像神九的航天员，明明啥事没干还要装出一副很忙的样子；你格调不俗，业余时间不是昆曲就是话剧，不是民谣专场就是妈妈咪呀；你善良正义，身处斗室，胸怀天下，每天吃饱饭就刷刷微博拯救中国。
 　　<br>你用苹果，买个五千块的马脸iPhone，又是贴膜又是镶钻，十天换八个壳；你用谷歌，买个两千块的安卓手机，又是S-OFF又是ROOT，十天刷八个ROM。你关注互联网，精通电子产品，上机锋网威锋网雷锋网，电脑里永远装着十个GTD软件八个思维导图软件，用Instagram记录生活，对乔布斯比对你爸还了解，以果粉自居并喜欢到论坛上问：iOS6完美越狱什么时候出来啊？
 　　<br>你发烧，你还发骚，出门带着IPC，用麻绳绑个随身耳放，再配一对ER4P入耳式耳塞，完全隔音，也不怕被车撞死。嫌不够惹眼？那就换一副时下最流行的魔声Beats Pro头戴式耳机，每一个苹果旗舰店的配件区里都有卖，它颜色鲜艳外形时尚，两个耳朵每边印着一个b，挂在你的头上，真是实至名归。
@@ -541,42 +564,47 @@ Bundle 'Valloric/YouCompleteMe'
 　　<br>你会当凌绝顶，一览众逼小。你再也不需要装逼，因为，你就是逼。
 　　<br>你安然地度过了一生，死后安葬在宁静的故乡，野花轻轻覆盖你的墓碑，上面镌刻的六个大字清晰可辨：
 　　<br>“活过，爱过，装过。”</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-02-27T22:02:00+08:00" pubdate data-updated="true">Feb 27<span>th</span>, 2013</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/杂文/'>杂文</a>
+
+
 </div>
-  
-  
+	
+</div>
+</article>
 
 
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/02/25/ios-systme-directory/">Ios 系统目录描述</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-02-25T14:50:00+08:00" pubdate data-updated="true">Feb 25<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><br>1、【/Applications】
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2013/02/25/ios-systme-directory/">
+		
+			Ios 系统目录描述</a>
+	</h2>
+	<div class="entry-content">
+		<br>1、【/Applications】
 
 
 <br>常用软件的安装目录 内建软体及JB软体存放位置
@@ -816,42 +844,43 @@ WB相关主题
 
 
 
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-02-25T14:50:00+08:00" pubdate data-updated="true">Feb 25<span>th</span>, 2013</time></div>
+	<div class="tags">
+
 </div>
-  
-  
+	
+</div>
+</article>
 
 
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/02/23/test/">.net微信公众平台接口代码</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-02-23T12:33:00+08:00" pubdate data-updated="true">Feb 23<span>rd</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><pre><code>using System;
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2013/02/23/test/">
+		
+			.net微信公众平台接口代码</a>
+	</h2>
+	<div class="entry-content">
+		<pre><code>using System;
 using System.Configuration;
 using System.Data;
 using System.Linq;
@@ -1015,42 +1044,43 @@ namespace Web.UI
 
 
 <p></code></p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-02-23T12:33:00+08:00" pubdate data-updated="true">Feb 23<span>rd</span>, 2013</time></div>
+	<div class="tags">
+
 </div>
-  
-  
+	
+</div>
+</article>
 
 
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/02/19/zhong-wen-ce-shi/">Github+octopress+vim&#8211;像黑客一样写博客（1）</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-02-19T18:06:00+08:00" pubdate data-updated="true">Feb 19<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>年前闲来没事，就在github上尝试搭建了下博客，然后发现了octopress，最早接触博客是在新浪。后来不再满足，然后尝试了自己的个人站点，配合wordpress。因为，虚拟空间的费用等问题，一年左右就搁浅了。今天我就介绍下怎么在github上搭建博客，因为网上已有很多教程，但是我在搭建中遇到很多问题，所以，我根据自己的对别人的文章进行了一些修改。</p>
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2013/02/19/zhong-wen-ce-shi/">
+		
+			Github+octopress+vim&#8211;像黑客一样写博客（1）</a>
+	</h2>
+	<div class="entry-content">
+		<p>年前闲来没事，就在github上尝试搭建了下博客，然后发现了octopress，最早接触博客是在新浪。后来不再满足，然后尝试了自己的个人站点，配合wordpress。因为，虚拟空间的费用等问题，一年左右就搁浅了。今天我就介绍下怎么在github上搭建博客，因为网上已有很多教程，但是我在搭建中遇到很多问题，所以，我根据自己的对别人的文章进行了一些修改。</p>
 
 <p>首先你要拥有个人github账号
 具体怎么申请和配置，可以在www.github.com上自己看。</p>
@@ -1115,86 +1145,88 @@ git remote add rubyonchina git@github.com:rubyonchina/rubyonchina.github.com.git
 git commit -m &#8220;some changes&#8221;
 git push rubyonchina source
 现在，你就拥有了一个强大的个人站点。</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-02-19T18:06:00+08:00" pubdate data-updated="true">Feb 19<span>th</span>, 2013</time></div>
+	<div class="tags">
+
 </div>
-  
-  
-
-
-    </article>
-  
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2013/02/05/hello-ruby/">正式安家</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-02-05T17:19:00+08:00" pubdate data-updated="true">Feb 5<span>th</span>, 2013</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>过年期间，由于闲的蛋疼，开始各种折腾，很早看到有人在github上搭建博客，然后就开始各种尝试,终于经过不懈的努力，弄好了。感觉像搬新家一样的兴奋。我会在这里给大家分享技术，生活，各种事情。</p>
+	
 </div>
-  
+</article>
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2013/02/05/hello-ruby/">
+		
+			正式安家</a>
+	</h2>
+	<div class="entry-content">
+		<p>过年期间，由于闲的蛋疼，开始各种折腾，很早看到有人在github上搭建博客，然后就开始各种尝试,终于经过不懈的努力，弄好了。感觉像搬新家一样的兴奋。我会在这里给大家分享技术，生活，各种事情。</p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
   
 
 
-    </article>
-  
-  <div class="pagination">
-    
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
+<time datetime="2013-02-05T17:19:00+08:00" pubdate data-updated="true">Feb 5<span>th</span>, 2013</time></div>
+	<div class="tags">
+
 </div>
-<aside class="sidebar">
-  
-    
-  
-</aside>
+	
+</div>
+</article>
 
-    </div>
-  </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2013 - Castiel -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-</p>
+<nav id="pagenavi">
+    
+    
+    <div class="center"><a href="/blog/archives">Blog Archives</a></div>
+</nav></div>
+	<footer id="footer" class="inner">Copyright &copy; 2013
+
+    Castiel
 
 </footer>
-  
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
 
-
-
-
-
-
-
-  <script type="text/javascript">
-    (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.type = 'text/javascript';
-      twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
-    })();
-  </script>
 
 
 
