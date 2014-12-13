@@ -7,7 +7,13 @@
 	<meta name="author" content="Castiel">
 
 	
-	<meta name="description" content="年前闲来没事，就在github上尝试搭建了下博客，然后发现了octopress，最早接触博客是在新浪。后来不再满足，然后尝试了自己的个人站点，配合wordpress。因为，虚拟空间的费用等问题，一年左右就搁浅了。今天我就介绍下怎么在github上搭建博客，因为网上已有很多教程， &hellip;">
+	<meta name="description" content="using System;
+using System.Configuration;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI; &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -90,6 +96,206 @@
 
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/2013/02/23/test/">
+		
+			.net微信公众平台接口代码</a>
+	</h2>
+	<div class="entry-content">
+		<pre><code>using System;
+using System.Configuration;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Xml.Linq;
+using System.IO;
+using System.Xml;
+using System.Text;
+using System.Data.SqlClient;
+using System.Data;
+<br>
+namespace Web.UI
+{
+    public partial class Weixin : System.Web.UI.Page
+    {
+        const string Token = "token";       //你的token
+        protected string strJson = "";
+        protected string DefaultOrganise;
+        Lib.SqlHelper sqlHelper = new Lib.SqlHelper();
+        string Connectionstring = @"Data Source=192.100.60.122;Initial catalog=appdevtestdb;UID=sa;pwd=ZBJT0049admin;";//替换
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            string postStr = "";
+           // Valid();                        //验证通过后可删除此行代码
+            if (Request.HttpMethod.ToLower() == "post")
+            {
+                Stream s = System.Web.HttpContext.Current.Request.InputStream;
+                byte[] b = new byte[s.Length];
+                s.Read(b, 0, (int)s.Length);
+                postStr = Encoding.UTF8.GetString(b);
+                if (!string.IsNullOrEmpty(postStr))
+                {
+                    ResponseMsg(postStr);
+
+                }
+
+            }
+        }
+
+        /// <summary>
+        /// 返回信息结果(微信信息返回)
+        /// </summary>
+        /// <param name="weixinXML"></param>
+        private void ResponseMsg(string weixinXML)
+        {
+            //回复消息的部分:你的代码写在这里
+            XmlDocument doc = new XmlDocument();
+            doc.LoadXml(weixinXML);
+            XmlNodeList list = doc.GetElementsByTagName("xml");
+            XmlNode xn = list[0];
+            string FromUserName = xn.SelectSingleNode("//FromUserName").InnerText;
+            string ToUserName = xn.SelectSingleNode("//ToUserName").InnerText;
+            string content = "";
+            content = xn.SelectSingleNode("//Content").InnerText;
+            //string content = "";// doc.GetElementsByTagName("content").Item(0).ToString();
+    
+            if (content.Equals("Hello2BizUser"))
+            {
+                content = "欢迎关注!";
+            }
+          
+            else 
+            {
+               
+                content = "现在是北京时间：" + string.Format("{0:f}", DateTime.Now);
+            }
+            string strresponse = "<xml>";
+            strresponse = strresponse + "<ToUserName><![CDATA[" + FromUserName + "]]></ToUserName>";
+            strresponse = strresponse + "<FromUserName><![CDATA[" + ToUserName + "]]></FromUserName>";
+            strresponse = strresponse + "<CreateTime>" + DateTime.Now.Ticks.ToString() + "</CreateTime>";
+            strresponse = strresponse + "<MsgType><![CDATA[text]]></MsgType>";
+            strresponse = strresponse + "<Content><![CDATA[" + content + "]]></Content>";
+            strresponse = strresponse + "<FuncFlag>0<FuncFlag>";
+            strresponse = strresponse + "</xml>";
+            WriteLog("postStr:" + content);
+            Response.Write(strresponse);
+        }
+        /// <summary>
+              /// <summary>
+        /// 写日志(用于跟踪)
+        /// </summary>
+        private void WriteLog(string strMemo)
+        {
+            if (!Directory.Exists(Server.MapPath(@"logs\")))
+            {
+                Directory.CreateDirectory(Server.MapPath(@"logs\"));
+            }
+            string filename = Server.MapPath(@"logs/log.txt");
+            StreamWriter sr = null;
+            try
+            {
+                if (!File.Exists(filename))
+                {
+                    sr = File.CreateText(filename);
+                }
+                else
+                {
+                    sr = File.AppendText(filename);
+                }
+                sr.WriteLine(strMemo);
+            }
+            catch
+            {
+            }
+            finally
+            {
+                if (sr != null)
+                    sr.Close();
+            }
+        }
+
+        /// <summary>
+        /// 验证微信签名
+        /// </summary>
+        /// * 将token、timestamp、nonce三个参数进行字典序排序
+        /// * 将三个参数字符串拼接成一个字符串进行sha1加密
+        /// * 开发者获得加密后的字符串可与signature对比，标识该请求来源于微信。
+        /// <returns></returns>
+        private bool CheckSignature()
+        {
+            string signature = Request.QueryString["signature"].ToString();
+            string timestamp = Request.QueryString["timestamp"].ToString();
+            string nonce = Request.QueryString["nonce"].ToString();
+            string[] ArrTmp = { Token, timestamp, nonce };
+            Array.Sort(ArrTmp);     //字典排序
+            string tmpStr = string.Join("", ArrTmp);
+            tmpStr = FormsAuthentication.HashPasswordForStoringInConfigFile(tmpStr, "SHA1");
+            tmpStr = tmpStr.ToLower();
+            if (tmpStr.Equals(signature))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        /// <summary>
+        /// 验证
+        /// </summary>
+        private void Valid()
+        {
+            string echoStr = Request.QueryString["echoStr"].ToString();
+            if (CheckSignature())
+            {
+                if (!string.IsNullOrEmpty(echoStr))
+                {
+                    Response.Write(echoStr);
+                    Response.End();
+                }
+            }
+        }
+    }
+}
+</pre>
+
+
+<p></code></p>
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-02-23T12:33:00+08:00" pubdate data-updated="true">Feb 23<span>rd</span>, 2013</time></div>
+	<div class="tags">
+
+</div>
+	
+</div>
+</article>
 
 
     <article class="post">
