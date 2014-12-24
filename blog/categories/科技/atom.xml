@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[分类:科技 | Castiel Blog]]></title>
-  <link href="http://superzhang.github.com/blog/categories/科技/atom.xml" rel="self"/>
-  <link href="http://superzhang.github.com/"/>
-  <updated>2014-12-25T00:36:08+08:00</updated>
-  <id>http://superzhang.github.com/</id>
+  <title><![CDATA[分类科技 | Castiel Blog]]></title>
+  <link href="http://suerzhang.github.io/blog/categories/科技/atom.xml" rel="self"/>
+  <link href="http://suerzhang.github.io/"/>
+  <updated>2014-12-25T01:37:43+08:00</updated>
+  <id>http://suerzhang.github.io/</id>
   <author>
     <name><![CDATA[Castiel]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[老罗，锤子科技和他的情怀]]></title>
-    <link href="http://superzhang.github.com/blog/20130404/lao-luo-%2Ccui-zhui-zi-ke-ji-he-ta-de-qing-huai.html/"/>
+    <link href="http://suerzhang.github.io/blog/20130404/lao-luo-%2Ccui-zhui-zi-ke-ji-he-ta-de-qing-huai.html/"/>
     <updated>2013-04-04T23:47:00+08:00</updated>
-    <id>http://superzhang.github.com/blog/20130404/lao-luo-,cui-zhui-zi-ke-ji-he-ta-de-qing-huai</id>
+    <id>http://suerzhang.github.io/blog/20130404/lao-luo-,cui-zhui-zi-ke-ji-he-ta-de-qing-huai</id>
     <content type="html"><![CDATA[<p>昨天晚上把老罗的锤子科技rom发布会的官方视频看了下，跟之前的报道感觉完全不一样。图文的报道根本体现不出老罗的情怀。</p>
 
 <p>老罗说的好，在可以和人文的路上，我只看到了乔布斯的坟墓孤零零的立在那里。iPhone的出现，改变了我们的生活，改变了手机行业，改变了审美，改变了设计，也改变了我的人生。如果不是对iphone的喜欢，我估计还不知道去做什么。之前也尝试过做安卓的开发，但是，写了个hello world以后就放弃了。可以说给ios系统写程序也是一种享受。</p>

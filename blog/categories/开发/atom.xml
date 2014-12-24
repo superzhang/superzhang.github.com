@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[分类:开发 | Castiel Blog]]></title>
-  <link href="http://superzhang.github.com/blog/categories/开发/atom.xml" rel="self"/>
-  <link href="http://superzhang.github.com/"/>
-  <updated>2014-12-25T00:36:08+08:00</updated>
-  <id>http://superzhang.github.com/</id>
+  <title><![CDATA[分类开发 | Castiel Blog]]></title>
+  <link href="http://suerzhang.github.io/blog/categories/开发/atom.xml" rel="self"/>
+  <link href="http://suerzhang.github.io/"/>
+  <updated>2014-12-25T01:37:43+08:00</updated>
+  <id>http://suerzhang.github.io/</id>
   <author>
     <name><![CDATA[Castiel]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[使用KeymapManager管理Sublime Text2插件的快捷键]]></title>
-    <link href="http://superzhang.github.com/blog/20130605/title.html/"/>
+    <link href="http://suerzhang.github.io/blog/20130605/title.html/"/>
     <updated>2013-06-05T16:26:00+08:00</updated>
-    <id>http://superzhang.github.com/blog/20130605/title</id>
+    <id>http://suerzhang.github.io/blog/20130605/title</id>
     <content type="html"><![CDATA[<p>使用Sublime Text2编辑器的同学应该都知道，几乎所有的功能都可以通过快捷键进行。系统默认的快捷键可以通过Preferences -> Key Bindings – Default查看。但对于插件的快捷键查看就没这么简单了，有些插件将一些信息写到Sublime-Menu下还可以方便查看，但很多插件都没写Sublime Menu的信息，这个时候如果忘记了快捷键，那只能找到对应的插件目录，打开对应的文件查看了。</p>
 
 <p>为了解决这个问题，让所有安装的插件可以很方便的管理，开发了KeymapManager这个插件。</p>

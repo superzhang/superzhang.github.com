@@ -1,73 +1,73 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://superzhang.github.com/blog/20130205/hello-ruby.html/</loc>
-        <lastmod>2013-07-30T16:37:22+08:00</lastmod>
+        <loc>http://suerzhang.github.io/blog/20130205/hello-ruby.html/</loc>
+        <lastmod>2014-12-25T00:42:12+08:00</lastmod>
     </url>
     <url>
-        <loc>http://superzhang.github.com/blog/20130219/zhong-wen-ce-shi.html/</loc>
-        <lastmod>2013-07-30T16:37:22+08:00</lastmod>
+        <loc>http://suerzhang.github.io/blog/20130219/zhong-wen-ce-shi.html/</loc>
+        <lastmod>2014-12-25T00:42:12+08:00</lastmod>
     </url>
     <url>
-        <loc>http://superzhang.github.com/blog/20130223/test.html/</loc>
-        <lastmod>2013-07-30T16:37:22+08:00</lastmod>
+        <loc>http://suerzhang.github.io/blog/20130223/test.html/</loc>
+        <lastmod>2014-12-25T00:42:12+08:00</lastmod>
     </url>
     <url>
-        <loc>http://superzhang.github.com/blog/20130225/ios-systme-directory.html/</loc>
-        <lastmod>2013-07-30T16:37:22+08:00</lastmod>
-    </url>
-    <url>
-        <loc>
-            http://superzhang.github.com/blog/20130227/bu-xiang-zhuang-bi-de-sha-bi-bu-shi-hao-er-bi.html/
-        </loc>
-        <lastmod>2013-07-30T16:37:22+08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://superzhang.github.com/blog/20130228/vimcha-jian-pei-zhi.html/</loc>
-        <lastmod>2013-07-30T16:37:22+08:00</lastmod>
+        <loc>http://suerzhang.github.io/blog/20130225/ios-systme-directory.html/</loc>
+        <lastmod>2014-12-25T00:42:12+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://superzhang.github.com/blog/20130309/git-chang-yong-ming-ling-bei-wang.html/
+            http://suerzhang.github.io/blog/20130227/bu-xiang-zhuang-bi-de-sha-bi-bu-shi-hao-er-bi.html/
         </loc>
-        <lastmod>2013-07-30T16:37:22+08:00</lastmod>
+        <lastmod>2014-12-25T00:42:12+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://suerzhang.github.io/blog/20130228/vimcha-jian-pei-zhi.html/</loc>
+        <lastmod>2014-12-25T00:42:12+08:00</lastmod>
     </url>
     <url>
         <loc>
-            http://superzhang.github.com/blog/20130404/lao-luo-%2Ccui-zhui-zi-ke-ji-he-ta-de-qing-huai.html/
+            http://suerzhang.github.io/blog/20130309/git-chang-yong-ming-ling-bei-wang.html/
         </loc>
-        <lastmod>2013-07-30T16:37:22+08:00</lastmod>
+        <lastmod>2014-12-25T00:42:12+08:00</lastmod>
     </url>
     <url>
-        <loc>http://superzhang.github.com/blog/20130605/title.html/</loc>
-        <lastmod>2013-07-30T16:37:22+08:00</lastmod>
+        <loc>
+            http://suerzhang.github.io/blog/20130404/lao-luo-%2Ccui-zhui-zi-ke-ji-he-ta-de-qing-huai.html/
+        </loc>
+        <lastmod>2014-12-25T00:42:12+08:00</lastmod>
     </url>
     <url>
-        <loc>http://superzhang.github.com/blog/20130730/na-xie-niu-ren-yao.html/</loc>
-        <lastmod>2013-07-30T17:17:54+08:00</lastmod>
+        <loc>http://suerzhang.github.io/blog/20130605/title.html/</loc>
+        <lastmod>2014-12-25T00:42:12+08:00</lastmod>
     </url>
     <url>
-        <loc>http://superzhang.github.com/blog/20130813/yue-du-he-xie-zuo.html/</loc>
-        <lastmod>2013-08-13T16:04:50+08:00</lastmod>
+        <loc>http://suerzhang.github.io/blog/20130730/na-xie-niu-ren-yao.html/</loc>
+        <lastmod>2014-12-25T00:42:12+08:00</lastmod>
     </url>
     <url>
-        <loc>http://superzhang.github.com/blog/20141213/you-sheng-mei-di.html/</loc>
-        <lastmod>2014-12-13T13:26:30+08:00</lastmod>
+        <loc>http://suerzhang.github.io/blog/20130813/yue-du-he-xie-zuo.html/</loc>
+        <lastmod>2014-12-25T00:42:12+08:00</lastmod>
     </url>
     <url>
-        <loc>http://superzhang.github.com/blog/20141213/tuo-yan-zheng.html/</loc>
+        <loc>http://suerzhang.github.io/blog/20141213/you-sheng-mei-di.html/</loc>
+        <lastmod>2014-12-25T00:42:12+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://suerzhang.github.io/blog/20141213/tuo-yan-zheng.html/</loc>
+        <lastmod>2014-12-25T00:42:12+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://suerzhang.github.io/blog/archives/</loc>
         <lastmod>2014-12-13T14:13:59+08:00</lastmod>
     </url>
     <url>
-        <loc>http://superzhang.github.com/blog/archives/</loc>
+        <loc>http://suerzhang.github.io/</loc>
         <lastmod>2014-12-13T14:13:59+08:00</lastmod>
     </url>
     <url>
-        <loc>http://superzhang.github.com/</loc>
-        <lastmod>2014-12-13T14:13:59+08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://superzhang.github.com/robots.txt</loc>
+        <loc>http://suerzhang.github.io/robots.txt</loc>
         <lastmod>2013-02-05T14:42:22+08:00</lastmod>
     </url>
 </urlset>

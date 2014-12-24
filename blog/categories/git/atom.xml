@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[分类:Git | Castiel Blog]]></title>
-  <link href="http://superzhang.github.com/blog/categories/git/atom.xml" rel="self"/>
-  <link href="http://superzhang.github.com/"/>
-  <updated>2014-12-25T00:36:08+08:00</updated>
-  <id>http://superzhang.github.com/</id>
+  <title><![CDATA[分类Git | Castiel Blog]]></title>
+  <link href="http://suerzhang.github.io/blog/categories/git/atom.xml" rel="self"/>
+  <link href="http://suerzhang.github.io/"/>
+  <updated>2014-12-25T01:37:43+08:00</updated>
+  <id>http://suerzhang.github.io/</id>
   <author>
     <name><![CDATA[Castiel]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Git 常用命令备忘]]></title>
-    <link href="http://superzhang.github.com/blog/20130309/git-chang-yong-ming-ling-bei-wang.html/"/>
+    <link href="http://suerzhang.github.io/blog/20130309/git-chang-yong-ming-ling-bei-wang.html/"/>
     <updated>2013-03-09T17:17:00+08:00</updated>
-    <id>http://superzhang.github.com/blog/20130309/git-chang-yong-ming-ling-bei-wang</id>
+    <id>http://suerzhang.github.io/blog/20130309/git-chang-yong-ming-ling-bei-wang</id>
     <content type="html"><![CDATA[<p>Git配置</p>
 
 <pre><code>git config --global user.name "robbin"   

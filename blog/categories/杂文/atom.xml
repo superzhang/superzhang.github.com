@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[分类:杂文 | Castiel Blog]]></title>
-  <link href="http://superzhang.github.com/blog/categories/杂文/atom.xml" rel="self"/>
-  <link href="http://superzhang.github.com/"/>
-  <updated>2014-12-25T00:36:08+08:00</updated>
-  <id>http://superzhang.github.com/</id>
+  <title><![CDATA[分类杂文 | Castiel Blog]]></title>
+  <link href="http://suerzhang.github.io/blog/categories/杂文/atom.xml" rel="self"/>
+  <link href="http://suerzhang.github.io/"/>
+  <updated>2014-12-25T01:37:43+08:00</updated>
+  <id>http://suerzhang.github.io/</id>
   <author>
     <name><![CDATA[Castiel]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[拖延症]]></title>
-    <link href="http://superzhang.github.com/blog/20141213/tuo-yan-zheng.html/"/>
+    <link href="http://suerzhang.github.io/blog/20141213/tuo-yan-zheng.html/"/>
     <updated>2014-12-13T14:02:00+08:00</updated>
-    <id>http://superzhang.github.com/blog/20141213/tuo-yan-zheng</id>
+    <id>http://suerzhang.github.io/blog/20141213/tuo-yan-zheng</id>
     <content type="html"><![CDATA[<p>本来是想给博客换个主题，加点功能来着，拖延了一个礼拜，明天就要回去上班了，主题还是没换好。</p>
 
 <p>记录几个参考链接
@@ -28,9 +28,9 @@
   
   <entry>
     <title type="html"><![CDATA[优胜美地]]></title>
-    <link href="http://superzhang.github.com/blog/20141213/you-sheng-mei-di.html/"/>
+    <link href="http://suerzhang.github.io/blog/20141213/you-sheng-mei-di.html/"/>
     <updated>2014-12-13T13:06:00+08:00</updated>
-    <id>http://superzhang.github.com/blog/20141213/you-sheng-mei-di</id>
+    <id>http://suerzhang.github.io/blog/20141213/you-sheng-mei-di</id>
     <content type="html"><![CDATA[<p>看到上一次发的博文，没想到已经一年多了。上一次的内容还是在换新工作前。</p>
 
 <p>从没想过自己会去报社上班，新的环境新的工作确实感觉很好，但是一年多后，突然又感觉有点腻了。还记得最早的梦想是去改变世界，梦想能去谷歌，facebook，那些美好的公司。最后还是被现实打败，慢慢磨去了斗志。</p>
@@ -45,9 +45,9 @@
   
   <entry>
     <title type="html"><![CDATA[不想装逼的傻逼不是好二逼(转)]]></title>
-    <link href="http://superzhang.github.com/blog/20130227/bu-xiang-zhuang-bi-de-sha-bi-bu-shi-hao-er-bi.html/"/>
+    <link href="http://suerzhang.github.io/blog/20130227/bu-xiang-zhuang-bi-de-sha-bi-bu-shi-hao-er-bi.html/"/>
     <updated>2013-02-27T22:02:00+08:00</updated>
-    <id>http://superzhang.github.com/blog/20130227/bu-xiang-zhuang-bi-de-sha-bi-bu-shi-hao-er-bi</id>
+    <id>http://suerzhang.github.io/blog/20130227/bu-xiang-zhuang-bi-de-sha-bi-bu-shi-hao-er-bi</id>
     <content type="html"><![CDATA[<p><a href="http://lihuazhi.com/561">原文</a>
    <br>你受过良好的教育，有意无意间说起自己的大学，旁人无一例外纷纷投来艳羡目光。你工作光鲜，不是四大就是4A，不是垄断国企就是全球500强；在一个都是中国人的公司里互相叫对方英文名。你衣食无忧，三个月工资买一LV包；你生活清闲，上班时就像神九的航天员，明明啥事没干还要装出一副很忙的样子；你格调不俗，业余时间不是昆曲就是话剧，不是民谣专场就是妈妈咪呀；你善良正义，身处斗室，胸怀天下，每天吃饱饭就刷刷微博拯救中国。
 　　<br>你用苹果，买个五千块的马脸iPhone，又是贴膜又是镶钻，十天换八个壳；你用谷歌，买个两千块的安卓手机，又是S-OFF又是ROOT，十天刷八个ROM。你关注互联网，精通电子产品，上机锋网威锋网雷锋网，电脑里永远装着十个GTD软件八个思维导图软件，用Instagram记录生活，对乔布斯比对你爸还了解，以果粉自居并喜欢到论坛上问：iOS6完美越狱什么时候出来啊？
