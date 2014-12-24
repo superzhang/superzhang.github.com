@@ -4,7 +4,7 @@
   <title><![CDATA[Castiel Blog]]></title>
   <link href="http://superzhang.github.com/atom.xml" rel="self"/>
   <link href="http://superzhang.github.com/"/>
-  <updated>2014-12-13T14:17:06+08:00</updated>
+  <updated>2014-12-24T16:17:59+08:00</updated>
   <id>http://superzhang.github.com/</id>
   <author>
     <name><![CDATA[Castiel]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[拖延症]]></title>
-    <link href="http://superzhang.github.com/blog/2014/12/13/tuo-yan-zheng/"/>
+    <link href="http://superzhang.github.com/blog/20141213/tuo-yan-zheng.html/"/>
     <updated>2014-12-13T14:02:00+08:00</updated>
-    <id>http://superzhang.github.com/blog/2014/12/13/tuo-yan-zheng</id>
+    <id>http://superzhang.github.com/blog/20141213/tuo-yan-zheng</id>
     <content type="html"><![CDATA[<p>本来是想给博客换个主题，加点功能来着，拖延了一个礼拜，明天就要回去上班了，主题还是没换好。</p>
 
 <p>记录几个参考链接
@@ -28,9 +28,9 @@
   
   <entry>
     <title type="html"><![CDATA[优胜美地]]></title>
-    <link href="http://superzhang.github.com/blog/2014/12/13/you-sheng-mei-di/"/>
+    <link href="http://superzhang.github.com/blog/20141213/you-sheng-mei-di.html/"/>
     <updated>2014-12-13T13:06:00+08:00</updated>
-    <id>http://superzhang.github.com/blog/2014/12/13/you-sheng-mei-di</id>
+    <id>http://superzhang.github.com/blog/20141213/you-sheng-mei-di</id>
     <content type="html"><![CDATA[<p>看到上一次发的博文，没想到已经一年多了。上一次的内容还是在换新工作前。</p>
 
 <p>从没想过自己会去报社上班，新的环境新的工作确实感觉很好，但是一年多后，突然又感觉有点腻了。还记得最早的梦想是去改变世界，梦想能去谷歌，facebook，那些美好的公司。最后还是被现实打败，慢慢磨去了斗志。</p>
@@ -45,9 +45,9 @@
   
   <entry>
     <title type="html"><![CDATA[阅读]]></title>
-    <link href="http://superzhang.github.com/blog/2013/08/13/yue-du-he-xie-zuo/"/>
+    <link href="http://superzhang.github.com/blog/20130813/yue-du-he-xie-zuo.html/"/>
     <updated>2013-08-13T15:28:00+08:00</updated>
-    <id>http://superzhang.github.com/blog/2013/08/13/yue-du-he-xie-zuo</id>
+    <id>http://superzhang.github.com/blog/20130813/yue-du-he-xie-zuo</id>
     <content type="html"><![CDATA[<p>iPad的出现，彻底打破了传统的阅读方式。我惊喜的发现这就是我想要的设备，在我还没有买iPhone的时候，我果断的入手了iPad1.虽然那时候的iPad是那么的笨重，屏幕只是那么的普通。但是那个尺寸，那个续航能力，那种体验是无法比拟的。甚至比我用mac电脑的感觉还要好。</p>
 
 <p>那时候用iPad看杂志、看书确实给我省了很多钱，很惭愧一直都看盗版的。还记得花钱买第一个正版的软件是字节社的《乔布斯传》其实并不能算是软件，却给我日后买正版软件的习惯打下了第一步。在windows上一直没有买软件的习惯，原来是没有吸引我的。当一个产品真正好的时候，用户还是会愿意花钱的。感谢乔布斯发明了app store，发明了iPad，发明了Mac。才会衍生出今天的字节社，多看，豆瓣阅读。没有一个好的阅读设备，这些虚拟的书城是没能那么繁荣的。</p>
@@ -62,9 +62,9 @@
   
   <entry>
     <title type="html"><![CDATA[那些牛人么(1)]]></title>
-    <link href="http://superzhang.github.com/blog/2013/07/30/na-xie-niu-ren-yao/"/>
+    <link href="http://superzhang.github.com/blog/20130730/na-xie-niu-ren-yao.html/"/>
     <updated>2013-07-30T16:55:00+08:00</updated>
-    <id>http://superzhang.github.com/blog/2013/07/30/na-xie-niu-ren-yao</id>
+    <id>http://superzhang.github.com/blog/20130730/na-xie-niu-ren-yao</id>
     <content type="html"><![CDATA[<p>转自外刊IT评论网</p>
 
 <p>旅行，写作，编程</p>
@@ -155,9 +155,9 @@
   
   <entry>
     <title type="html"><![CDATA[使用KeymapManager管理Sublime Text2插件的快捷键]]></title>
-    <link href="http://superzhang.github.com/blog/2013/06/05/title/"/>
+    <link href="http://superzhang.github.com/blog/20130605/title.html/"/>
     <updated>2013-06-05T16:26:00+08:00</updated>
-    <id>http://superzhang.github.com/blog/2013/06/05/title</id>
+    <id>http://superzhang.github.com/blog/20130605/title</id>
     <content type="html"><![CDATA[<p>使用Sublime Text2编辑器的同学应该都知道，几乎所有的功能都可以通过快捷键进行。系统默认的快捷键可以通过Preferences -> Key Bindings – Default查看。但对于插件的快捷键查看就没这么简单了，有些插件将一些信息写到Sublime-Menu下还可以方便查看，但很多插件都没写Sublime Menu的信息，这个时候如果忘记了快捷键，那只能找到对应的插件目录，打开对应的文件查看了。</p>
 
 <p>为了解决这个问题，让所有安装的插件可以很方便的管理，开发了KeymapManager这个插件。</p>
@@ -174,9 +174,9 @@
   
   <entry>
     <title type="html"><![CDATA[老罗，锤子科技和他的情怀]]></title>
-    <link href="http://superzhang.github.com/blog/2013/04/04/lao-luo-%2Ccui-zhui-zi-ke-ji-he-ta-de-qing-huai/"/>
+    <link href="http://superzhang.github.com/blog/20130404/lao-luo-%2Ccui-zhui-zi-ke-ji-he-ta-de-qing-huai.html/"/>
     <updated>2013-04-04T23:47:00+08:00</updated>
-    <id>http://superzhang.github.com/blog/2013/04/04/lao-luo-,cui-zhui-zi-ke-ji-he-ta-de-qing-huai</id>
+    <id>http://superzhang.github.com/blog/20130404/lao-luo-,cui-zhui-zi-ke-ji-he-ta-de-qing-huai</id>
     <content type="html"><![CDATA[<p>昨天晚上把老罗的锤子科技rom发布会的官方视频看了下，跟之前的报道感觉完全不一样。图文的报道根本体现不出老罗的情怀。</p>
 
 <p>老罗说的好，在可以和人文的路上，我只看到了乔布斯的坟墓孤零零的立在那里。iPhone的出现，改变了我们的生活，改变了手机行业，改变了审美，改变了设计，也改变了我的人生。如果不是对iphone的喜欢，我估计还不知道去做什么。之前也尝试过做安卓的开发，但是，写了个hello world以后就放弃了。可以说给ios系统写程序也是一种享受。</p>
@@ -191,9 +191,9 @@
   
   <entry>
     <title type="html"><![CDATA[Git 常用命令备忘]]></title>
-    <link href="http://superzhang.github.com/blog/2013/03/09/git-chang-yong-ming-ling-bei-wang/"/>
+    <link href="http://superzhang.github.com/blog/20130309/git-chang-yong-ming-ling-bei-wang.html/"/>
     <updated>2013-03-09T17:17:00+08:00</updated>
-    <id>http://superzhang.github.com/blog/2013/03/09/git-chang-yong-ming-ling-bei-wang</id>
+    <id>http://superzhang.github.com/blog/20130309/git-chang-yong-ming-ling-bei-wang</id>
     <content type="html"><![CDATA[<p>Git配置</p>
 
 <pre><code>git config --global user.name "robbin"   
@@ -361,9 +361,9 @@ git branch --set-upstream develop origin/develop</pre>
   
   <entry>
     <title type="html"><![CDATA[Vim插件配置]]></title>
-    <link href="http://superzhang.github.com/blog/2013/02/28/vimcha-jian-pei-zhi/"/>
+    <link href="http://superzhang.github.com/blog/20130228/vimcha-jian-pei-zhi.html/"/>
     <updated>2013-02-28T21:06:00+08:00</updated>
-    <id>http://superzhang.github.com/blog/2013/02/28/vimcha-jian-pei-zhi</id>
+    <id>http://superzhang.github.com/blog/20130228/vimcha-jian-pei-zhi</id>
     <content type="html"><![CDATA[<p>看到别人的博客介绍Vundle之前，我用Pathogen管理插件。Pathogen还算方便，只需要把相应插件，放在bundle目录下即可，不需要很复杂的设置，管理起来也一目了然，而且当第一次使用vim的时候，你会觉的很容易上手。</p>
 
 <p>感谢现在的互联网，能让我看到很多好的东西，能让我很容易能上手神奇vim，如果没有那么多插件，vim只能觉的很普通一样。Vundel的插件安装逻辑结构是这样的：</p>
@@ -466,9 +466,9 @@ Bundle 'Valloric/YouCompleteMe'
   
   <entry>
     <title type="html"><![CDATA[不想装逼的傻逼不是好二逼(转)]]></title>
-    <link href="http://superzhang.github.com/blog/2013/02/27/bu-xiang-zhuang-bi-de-sha-bi-bu-shi-hao-er-bi/"/>
+    <link href="http://superzhang.github.com/blog/20130227/bu-xiang-zhuang-bi-de-sha-bi-bu-shi-hao-er-bi.html/"/>
     <updated>2013-02-27T22:02:00+08:00</updated>
-    <id>http://superzhang.github.com/blog/2013/02/27/bu-xiang-zhuang-bi-de-sha-bi-bu-shi-hao-er-bi</id>
+    <id>http://superzhang.github.com/blog/20130227/bu-xiang-zhuang-bi-de-sha-bi-bu-shi-hao-er-bi</id>
     <content type="html"><![CDATA[<p><a href="http://lihuazhi.com/561">原文</a>
    <br>你受过良好的教育，有意无意间说起自己的大学，旁人无一例外纷纷投来艳羡目光。你工作光鲜，不是四大就是4A，不是垄断国企就是全球500强；在一个都是中国人的公司里互相叫对方英文名。你衣食无忧，三个月工资买一LV包；你生活清闲，上班时就像神九的航天员，明明啥事没干还要装出一副很忙的样子；你格调不俗，业余时间不是昆曲就是话剧，不是民谣专场就是妈妈咪呀；你善良正义，身处斗室，胸怀天下，每天吃饱饭就刷刷微博拯救中国。
 　　<br>你用苹果，买个五千块的马脸iPhone，又是贴膜又是镶钻，十天换八个壳；你用谷歌，买个两千块的安卓手机，又是S-OFF又是ROOT，十天刷八个ROM。你关注互联网，精通电子产品，上机锋网威锋网雷锋网，电脑里永远装着十个GTD软件八个思维导图软件，用Instagram记录生活，对乔布斯比对你爸还了解，以果粉自居并喜欢到论坛上问：iOS6完美越狱什么时候出来啊？
@@ -503,9 +503,9 @@ Bundle 'Valloric/YouCompleteMe'
   
   <entry>
     <title type="html"><![CDATA[ios 系统目录描述]]></title>
-    <link href="http://superzhang.github.com/blog/2013/02/25/ios-systme-directory/"/>
+    <link href="http://superzhang.github.com/blog/20130225/ios-systme-directory.html/"/>
     <updated>2013-02-25T14:50:00+08:00</updated>
-    <id>http://superzhang.github.com/blog/2013/02/25/ios-systme-directory</id>
+    <id>http://superzhang.github.com/blog/20130225/ios-systme-directory</id>
     <content type="html"><![CDATA[<br>1、【/Applications】
 
 
@@ -751,9 +751,9 @@ WB相关主题
   
   <entry>
     <title type="html"><![CDATA[.net微信公众平台接口代码]]></title>
-    <link href="http://superzhang.github.com/blog/2013/02/23/test/"/>
+    <link href="http://superzhang.github.com/blog/20130223/test.html/"/>
     <updated>2013-02-23T12:33:00+08:00</updated>
-    <id>http://superzhang.github.com/blog/2013/02/23/test</id>
+    <id>http://superzhang.github.com/blog/20130223/test</id>
     <content type="html"><![CDATA[<pre><code>using System;
 using System.Configuration;
 using System.Data;
@@ -923,9 +923,9 @@ namespace Web.UI
   
   <entry>
     <title type="html"><![CDATA[github+octopress+vim--像黑客一样写博客（1）]]></title>
-    <link href="http://superzhang.github.com/blog/2013/02/19/zhong-wen-ce-shi/"/>
+    <link href="http://superzhang.github.com/blog/20130219/zhong-wen-ce-shi.html/"/>
     <updated>2013-02-19T18:06:00+08:00</updated>
-    <id>http://superzhang.github.com/blog/2013/02/19/zhong-wen-ce-shi</id>
+    <id>http://superzhang.github.com/blog/20130219/zhong-wen-ce-shi</id>
     <content type="html"><![CDATA[<p>年前闲来没事，就在github上尝试搭建了下博客，然后发现了octopress，最早接触博客是在新浪。后来不再满足，然后尝试了自己的个人站点，配合wordpress。因为，虚拟空间的费用等问题，一年左右就搁浅了。今天我就介绍下怎么在github上搭建博客，因为网上已有很多教程，但是我在搭建中遇到很多问题，所以，我根据自己的对别人的文章进行了一些修改。</p>
 
 <p>首先你要拥有个人github账号
@@ -996,9 +996,9 @@ git push rubyonchina source
   
   <entry>
     <title type="html"><![CDATA[正式安家]]></title>
-    <link href="http://superzhang.github.com/blog/2013/02/05/hello-ruby/"/>
+    <link href="http://superzhang.github.com/blog/20130205/hello-ruby.html/"/>
     <updated>2013-02-05T17:19:00+08:00</updated>
-    <id>http://superzhang.github.com/blog/2013/02/05/hello-ruby</id>
+    <id>http://superzhang.github.com/blog/20130205/hello-ruby</id>
     <content type="html"><![CDATA[<p>过年期间，由于闲的蛋疼，开始各种折腾，很早看到有人在github上搭建博客，然后就开始各种尝试,终于经过不懈的努力，弄好了。感觉像搬新家一样的兴奋。我会在这里给大家分享技术，生活，各种事情。</p>
 ]]></content>
   </entry>

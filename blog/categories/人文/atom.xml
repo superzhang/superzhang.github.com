@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: 人文 | Castiel Blog]]></title>
+  <title><![CDATA[分类:人文 | Castiel Blog]]></title>
   <link href="http://superzhang.github.com/blog/categories/人文/atom.xml" rel="self"/>
   <link href="http://superzhang.github.com/"/>
-  <updated>2014-12-13T14:17:06+08:00</updated>
+  <updated>2014-12-24T16:17:59+08:00</updated>
   <id>http://superzhang.github.com/</id>
   <author>
     <name><![CDATA[Castiel]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[阅读]]></title>
-    <link href="http://superzhang.github.com/blog/2013/08/13/yue-du-he-xie-zuo/"/>
+    <link href="http://superzhang.github.com/blog/20130813/yue-du-he-xie-zuo.html/"/>
     <updated>2013-08-13T15:28:00+08:00</updated>
-    <id>http://superzhang.github.com/blog/2013/08/13/yue-du-he-xie-zuo</id>
+    <id>http://superzhang.github.com/blog/20130813/yue-du-he-xie-zuo</id>
     <content type="html"><![CDATA[<p>iPad的出现，彻底打破了传统的阅读方式。我惊喜的发现这就是我想要的设备，在我还没有买iPhone的时候，我果断的入手了iPad1.虽然那时候的iPad是那么的笨重，屏幕只是那么的普通。但是那个尺寸，那个续航能力，那种体验是无法比拟的。甚至比我用mac电脑的感觉还要好。</p>
 
 <p>那时候用iPad看杂志、看书确实给我省了很多钱，很惭愧一直都看盗版的。还记得花钱买第一个正版的软件是字节社的《乔布斯传》其实并不能算是软件，却给我日后买正版软件的习惯打下了第一步。在windows上一直没有买软件的习惯，原来是没有吸引我的。当一个产品真正好的时候，用户还是会愿意花钱的。感谢乔布斯发明了app store，发明了iPad，发明了Mac。才会衍生出今天的字节社，多看，豆瓣阅读。没有一个好的阅读设备，这些虚拟的书城是没能那么繁荣的。</p>
@@ -32,9 +32,9 @@
   
   <entry>
     <title type="html"><![CDATA[那些牛人么(1)]]></title>
-    <link href="http://superzhang.github.com/blog/2013/07/30/na-xie-niu-ren-yao/"/>
+    <link href="http://superzhang.github.com/blog/20130730/na-xie-niu-ren-yao.html/"/>
     <updated>2013-07-30T16:55:00+08:00</updated>
-    <id>http://superzhang.github.com/blog/2013/07/30/na-xie-niu-ren-yao</id>
+    <id>http://superzhang.github.com/blog/20130730/na-xie-niu-ren-yao</id>
     <content type="html"><![CDATA[<p>转自外刊IT评论网</p>
 
 <p>旅行，写作，编程</p>
