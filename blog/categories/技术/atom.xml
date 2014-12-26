@@ -4,7 +4,7 @@
   <title><![CDATA[分类技术 | Castiel Blog]]></title>
   <link href="http://suerzhang.github.io/blog/categories/技术/atom.xml" rel="self"/>
   <link href="http://suerzhang.github.io/"/>
-  <updated>2014-12-27T00:46:21+08:00</updated>
+  <updated>2014-12-27T01:04:45+08:00</updated>
   <id>http://suerzhang.github.io/</id>
   <author>
     <name><![CDATA[Castiel]]></name>
@@ -28,21 +28,17 @@
 
 <p>在_config.yml 中添加</p>
 
-<p>$$# duoshuo comments
+<p>codeblock
+$$# duoshuo comments
 duoshuo_comments: true
-duoshuo_short_name: yourname #这里的yourname是你在多说注册的二级域名，比如我是superzhang.duoshuo.com.这里就填superzhang$$</p>
+duoshuo_short_name: yourname #这里的yourname是你在多说注册的二级域名，比如我是superzhang.duoshuo.com.这里就填superzhang
+enccodeblock</p>
 
 <p>在 source/_layouts/post.html 中的 disqus代码</p>
 
-<p>$${% if site.disqus_short_name and page.comments == true %}
-  <section></p>
+<p>codeblock
 
-<pre><code>&lt;h1&gt;Comments&lt;/h1&gt;
-&lt;div id="disqus_thread" aria-live="polite"&gt;{% include post/disqus_thread.html %}&lt;/div&gt;
-</code></pre>
-
-<p>  </section>
-{% endif %}$$</p>
+endcodeblock</p>
 
 <p>下方添<strong>加多说评论</strong>模块</p>
 
@@ -52,17 +48,14 @@ duoshuo_short_name: yourname #这里的yourname是你在多说注册的二级域
 
 <p>随后，再修改<strong>_includes/article.html</strong>，在</p>
 
-<p>$${% if site.disqus_short_name and page.comments != false and post.comments != false and site.disqus_show_comment_count == true %}</p>
-
-<pre><code>     | &lt;a href="{% if index %}{{ root_url }}{{ post.url }}{% endif %}#disqus_thread"&gt;Comments&lt;/a&gt;
-    {% endif %}$$
+<p>$$$$
 </code></pre>
 
 <p> 下方添加
- `{% if site.duoshuo_short_name and page.comments != false and post.comments != false and site.duoshuo_comments == true %}</p>
+ `</p>
 
-<pre><code>      | &lt;a href="{% if index %}{{ root_url }}{{ post.url }}{% endif %}#comments"&gt;Comments&lt;/a&gt;
-     {% endif %}`
+<pre><code>      | &lt;a href="#comments"&gt;Comments&lt;/a&gt;
+     `
 </code></pre>
 
 <p> ###侧边栏插入最新评论</p>
@@ -83,30 +76,10 @@ duoshuo_asides_length: 18   # 侧边栏评论截取的长度
 <h1>Recent Comments</h1>
 
 
-<ul class="ds-recent-comments" data-num-items="{{ site.duoshuo_asides_num }}" data-show-avatars="{{ site.duoshuo_asides_avatars }}" data-show-time="{{ site.duoshuo_asides_time }}" data-show-title="{{ site.duoshuo_asides_title }}" data-show-admin="{{ site.duoshuo_asides_admin }}" data-excerpt-length="{{ site.duoshuo_asides_length }}"></ul>
+<ul class="ds-recent-comments" data-num-items="10" data-show-avatars="0" data-show-time="0" data-show-title="0" data-show-admin="0" data-excerpt-length="18"></ul>
 
 
-<p>{% if index %}</p>
-
-<!--多说js加载开始，一个页面只需要加载一次 -->
-
-
-<script type="text/javascript">
-  var duoshuoQuery = {short_name:"{{ site.duoshuo_short_name }}"};
-  (function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = 'http://static.duoshuo.com/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
-  })();
-</script>
-
-
-<!--多说js加载结束，一个页面只需要加载一次 -->
-
-
-<p>{% endif %}
+<p>
 </section>`</p>
 
 <p>最后，在<strong>_config.yml</strong>中的blog_index_asides行或pages_asides行或post_asides添加</p>
