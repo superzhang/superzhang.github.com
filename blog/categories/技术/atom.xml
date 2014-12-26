@@ -4,7 +4,7 @@
   <title><![CDATA[分类技术 | Castiel Blog]]></title>
   <link href="http://suerzhang.github.io/blog/categories/技术/atom.xml" rel="self"/>
   <link href="http://suerzhang.github.io/"/>
-  <updated>2014-12-27T00:31:50+08:00</updated>
+  <updated>2014-12-27T00:34:11+08:00</updated>
   <id>http://suerzhang.github.io/</id>
   <author>
     <name><![CDATA[Castiel]]></name>
@@ -39,7 +39,8 @@ duoshuo_short_name: yourname #这里的yourname是你在多说注册的二级域
 
 <p>下方添<strong>加多说评论</strong>模块</p>
 
-<p>``</p>
+<pre></pre>
+
 
 <p>如果你希望一些单独的页面下方也放置评论功能，譬如 rake new_page["xxx"] 产生的页面也能评论，那么请在 source/_layouts/page.html 中也做如上的修改。</p>
 
