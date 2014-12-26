@@ -124,28 +124,6 @@ duoshuo_short_name: yourname #这里的yourname是你在多说注册的二级域
 
 <p>下方添<strong>加多说评论</strong>模块</p>
 
-<pre>
-  <section>
-    <h1>Comments</h1>
-    <div id="comments" aria-live="polite"><!-- Duoshuo Comment BEGIN -->
-<div class="ds-thread" data-title="添加多说评论"></div>
-<script type="text/javascript">
-  var duoshuoQuery = {short_name:"superzhang"};
-  (function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = 'http://static.duoshuo.com/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0] 
-    || document.getElementsByTagName('body')[0]).appendChild(ds);
-  })();
-</script>
- <!-- Duoshuo Comment END -->
-</div>
-  </section>
-</pre>
-
-
 <p>如果你希望一些单独的页面下方也放置评论功能，譬如 rake new_page[&#8220;xxx&#8221;] 产生的页面也能评论，那么请在 source/_layouts/page.html 中也做如上的修改。</p>
 
 <p>创建一个<strong>source/_includes/post/duoshuo.html</strong></p>
