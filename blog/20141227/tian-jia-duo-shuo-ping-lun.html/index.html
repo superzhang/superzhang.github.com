@@ -1,0 +1,298 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>添加多说评论 - Castiel Blog</title>
+	<meta name="author" content="Castiel">
+
+	
+	<meta name="description" content="最近又突然想给博客做点改变，然后看到其他人添加了很多东西，今天就先添加一个评论吧。看到多说貌似不错，就用他了。 首先去多说注册个账号 自己百度 添加评论 在_config.yml 中添加 # duoshuo comments
+duoshuo_comments: true &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Castiel Blog" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script async="true" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">Castiel Blog</a></h1>
+<nav id="main-nav"><ul class="main">
+	<li><a href="/">主页</a></li>
+	<li><a href="/blog/archives">分类</a></li>
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul class="main">
+	<li><a href="/">主页</a></li>
+	<li><a href="/blog/archives">分类</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="http://google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:suerzhang.github.io">
+			</form>
+		</div>
+	</div>
+</nav>
+<nav id="sub-nav" class="alignright">
+	<div class="social">
+		
+		
+		
+		<a class="twitter" href="http://twitter.com/superupon" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/superzhang" title="GitHub">GitHub</a>
+		
+    
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+    
+	</div>
+	<form class="search" action="http://google.com/search" method="get">
+		<input class="alignright" type="text" name="q" results="0">
+		<input type="hidden" name="q" value="site:suerzhang.github.io">
+	</form>
+</nav>
+
+</header>
+	
+		
+<div id="banner" class="inner">
+	<div class="container">
+		<ul class="feed"></ul>
+	</div>
+	<small><a href="http://twitter.com/superupon">superupon</a> @ <a href="http://twitter.com">Twitter</a></small>
+	<div class="loading">Loading...</div>
+</div>
+<script src="/javascripts/twitter.js"></script>
+<script type="text/javascript">
+	(function($){
+		$('#banner').getTwitterFeed('superupon', 1, false);
+	})(jQuery);
+</script>
+
+	
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">添加多说评论</h2>
+	<div class="entry-content"><p>最近又突然想给博客做点改变，然后看到其他人添加了很多东西，今天就先添加一个评论吧。看到多说貌似不错，就用他了。</p>
+
+<h3>首先去多说注册个账号</h3>
+
+<p>自己百度</p>
+
+<h3>添加评论</h3>
+
+<p>在_config.yml 中添加</p>
+
+<p><code># duoshuo comments
+duoshuo_comments: true
+duoshuo_short_name: yourname #这里的yourname是你在多说注册的二级域名，比如我是superzhang.duoshuo.com.这里就填superzhang</code></p>
+
+<p>在 source/_layouts/post.html 中的 disqus代码</p>
+
+<p><code>
+</code></p>
+
+<p>下方添<strong>加多说评论</strong>模块</p>
+
+<p>`
+  <section></p>
+
+<pre><code>&lt;h1&gt;Comments&lt;/h1&gt;
+&lt;div id="comments" aria-live="polite"&gt;&lt;!-- Duoshuo Comment BEGIN --&gt;
+</code></pre>
+
+<div class="ds-thread" data-title="添加多说评论"></div>
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"superzhang"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+
+
+<p> <!-- Duoshuo Comment END -->
+</div>
+  </section>
+`</p>
+
+<p>如果你希望一些单独的页面下方也放置评论功能，譬如 rake new_page[&#8220;xxx&#8221;] 产生的页面也能评论，那么请在 source/<em>layouts/page.html 中也做如上的修改。
+创建一个**source/</em>includes/post/duoshuo.html**</p>
+
+<p>`<!-- Duoshuo Comment BEGIN --></p>
+
+<div class="ds-thread" data-title="添加多说评论"></div>
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"superzhang.duoshuo.com"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+
+
+<!-- Duoshuo Comment END -->
+
+
+<p>`</p>
+
+<p>随后，再修改<strong>_includes/article.html</strong>，在</p>
+
+<p><code></code></p>
+
+<p> 下方添加
+ `</p>
+
+<pre><code>      | &lt;a href="#comments"&gt;Comments&lt;/a&gt;
+     `
+</code></pre>
+
+<p> ###侧边栏插入最新评论</p>
+
+<p> 首先在<strong>_config.yml</strong>中再插入如下代码</p>
+
+<p> <code>duoshuo_asides_num: 10      # 侧边栏评论显示条目数
+duoshuo_asides_avatars: 0   # 侧边栏评论是否显示头像
+duoshuo_asides_time: 0      # 侧边栏评论是否显示时间
+duoshuo_asides_title: 0     # 侧边栏评论是否显示标题
+duoshuo_asides_admin: 0     # 侧边栏评论是否显示作者评论
+duoshuo_asides_length: 18   # 侧边栏评论截取的长度
+</code></p>
+
+<p>再创建_includes/custom/asides/recent_comments.html
+`<section></p>
+
+<h1>Recent Comments</h1>
+
+
+<ul class="ds-recent-comments" data-num-items="10" data-show-avatars="0" data-show-time="0" data-show-title="0" data-show-admin="0" data-excerpt-length="18"></ul>
+
+
+<p></section>`</p>
+
+<p>最后，在<strong>_config.yml</strong>中的blog_index_asides行或pages_asides行或post_asides添加</p>
+
+<p><code>custom/asides/recent_comments.html</code></p>
+
+<p>rake 下就可以看效果了</p>
+</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-12-27T00:01:00+08:00" pubdate data-updated="true">Dec 27<span>th</span>, 2014</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/技术/'>技术</a>
+
+
+</div>
+	
+    
+     <a href="#comments">Comments</a>
+              "
+        
+
+</div>
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+		
+		
+		<a class="addthis_button_tweet"></a>
+		
+		
+		
+	</div>
+	
+</div>
+
+
+
+
+  <section>
+      <h1>Comments</h1>
+          <div id="comments" aria-live="polite"><!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread" data-title="添加多说评论"></div>
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"superzhang"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+ <!-- Duoshuo Comment END -->
+</div>
+  </section>
+ 
+</div>
+	<footer id="footer" class="inner">Copyright &copy; 2014
+
+    Castiel
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+
+
+
+
+</body>
+</html>
