@@ -4,7 +4,7 @@
   <title><![CDATA[Castiel Blog]]></title>
   <link href="http://suerzhang.github.io/atom.xml" rel="self"/>
   <link href="http://suerzhang.github.io/"/>
-  <updated>2014-12-27T00:34:57+08:00</updated>
+  <updated>2014-12-27T00:46:19+08:00</updated>
   <id>http://suerzhang.github.io/</id>
   <author>
     <name><![CDATA[Castiel]]></name>
@@ -28,14 +28,13 @@
 
 <p>在_config.yml 中添加</p>
 
-<p><code># duoshuo comments
+<p>$$# duoshuo comments
 duoshuo_comments: true
-duoshuo_short_name: yourname #这里的yourname是你在多说注册的二级域名，比如我是superzhang.duoshuo.com.这里就填superzhang</code></p>
+duoshuo_short_name: yourname #这里的yourname是你在多说注册的二级域名，比如我是superzhang.duoshuo.com.这里就填superzhang$$</p>
 
 <p>在 source/_layouts/post.html 中的 disqus代码</p>
 
-<p><code>
-</code></p>
+<p>$$$$</p>
 
 <p>下方添<strong>加多说评论</strong>模块</p>
 
@@ -45,7 +44,7 @@ duoshuo_short_name: yourname #这里的yourname是你在多说注册的二级域
 
 <p>随后，再修改<strong>_includes/article.html</strong>，在</p>
 
-<p><code></code></p>
+<p>$$$$</p>
 
 <p> 下方添加
  `</p>
