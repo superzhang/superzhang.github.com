@@ -4,7 +4,7 @@
   <title><![CDATA[分类技术 | Castiel Blog]]></title>
   <link href="http://suerzhang.github.io/blog/categories/技术/atom.xml" rel="self"/>
   <link href="http://suerzhang.github.io/"/>
-  <updated>2014-12-27T01:04:45+08:00</updated>
+  <updated>2014-12-27T13:54:50+08:00</updated>
   <id>http://suerzhang.github.io/</id>
   <author>
     <name><![CDATA[Castiel]]></name>
@@ -18,21 +18,17 @@
     <link href="http://suerzhang.github.io/blog/20141227/tian-jia-duo-shuo-ping-lun.html/"/>
     <updated>2014-12-27T00:01:00+08:00</updated>
     <id>http://suerzhang.github.io/blog/20141227/tian-jia-duo-shuo-ping-lun</id>
-    <content type="html"><![CDATA[<p>最近又突然想给博客做点改变，然后看到其他人添加了很多东西，今天就先添加一个评论吧。看到多说貌似不错，就用他了。</p>
+    <content type="html"><![CDATA[<p>最近又突然想给博客做点改变，然后看到其他人添加了很多东西，今天就先添加一个评论吧。看到多说貌似不错，就用他了。
+###首先去多说注册个账号
+自己百度
+###添加评论
+在_config.yml 中添加</p>
 
-<h3>首先去多说注册个账号</h3>
-
-<p>自己百度</p>
-
-<h3>添加评论</h3>
-
-<p>在_config.yml 中添加</p>
-
-<p>codeblock
+<p>{ %coderay % }
 $$# duoshuo comments
 duoshuo_comments: true
 duoshuo_short_name: yourname #这里的yourname是你在多说注册的二级域名，比如我是superzhang.duoshuo.com.这里就填superzhang
-enccodeblock</p>
+{ % endcoderay % }</p>
 
 <p>在 source/_layouts/post.html 中的 disqus代码</p>
 
@@ -42,27 +38,25 @@ endcodeblock</p>
 
 <p>下方添<strong>加多说评论</strong>模块</p>
 
-<p>如果你希望一些单独的页面下方也放置评论功能，譬如 rake new_page["xxx"] 产生的页面也能评论，那么请在 source/_layouts/page.html 中也做如上的修改。</p>
+<p>如果你希望一些单独的页面下方也放置评论功能，譬如 rake new_page[“xxx”] 产生的页面也能评论，那么请在 source/_layouts/page.html 中也做如上的修改。</p>
 
 <p>创建一个<strong>source/_includes/post/duoshuo.html</strong></p>
 
 <p>随后，再修改<strong>_includes/article.html</strong>，在</p>
 
-<p>$$$$
-</code></pre>
+<script type="math/tex; mode=display">% &lt;![CDATA[
+ %]]&gt;</script>
 
-<p> 下方添加
- `</p>
+<p>下方添加
+ <code>
+          | &lt;a href="#comments"&gt;Comments&lt;/a&gt;
+         </code></p>
 
-<pre><code>      | &lt;a href="#comments"&gt;Comments&lt;/a&gt;
-     `
-</code></pre>
+<p>###侧边栏插入最新评论</p>
 
-<p> ###侧边栏插入最新评论</p>
+<p>首先在<strong>_config.yml</strong>中再插入如下代码</p>
 
-<p> 首先在<strong>_config.yml</strong>中再插入如下代码</p>
-
-<p> <code>duoshuo_asides_num: 10      # 侧边栏评论显示条目数
+<p><code>duoshuo_asides_num: 10      # 侧边栏评论显示条目数
 duoshuo_asides_avatars: 0   # 侧边栏评论是否显示头像
 duoshuo_asides_time: 0      # 侧边栏评论是否显示时间
 duoshuo_asides_title: 0     # 侧边栏评论是否显示标题
@@ -71,22 +65,18 @@ duoshuo_asides_length: 18   # 侧边栏评论截取的长度
 </code></p>
 
 <p>再创建_includes/custom/asides/recent_comments.html
-`<section></p>
-
+`&lt;section&gt;</p>
 <h1>Recent Comments</h1>
-
-
 <ul class="ds-recent-comments" data-num-items="10" data-show-avatars="0" data-show-time="0" data-show-title="0" data-show-admin="0" data-excerpt-length="18"></ul>
-
-
 <p>
-</section>`</p>
+&lt;/section&gt;`</p>
 
 <p>最后，在<strong>_config.yml</strong>中的blog_index_asides行或pages_asides行或post_asides添加</p>
 
 <p><code>custom/asides/recent_comments.html</code></p>
 
-<p>rake 下就可以看效果了</p>
+<p>rake 下就可以看效果了 </p>
+
 ]]></content>
   </entry>
   

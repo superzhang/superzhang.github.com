@@ -7,7 +7,8 @@
 	<meta name="author" content="Castiel">
 
 	
-	<meta name="description" content="Git配置 git config --global user.name "robbin" git config --global user.email "fankai@gmail.com"
+	<meta name="description" content="Git配置
+git config --global user.name "robbin" git config --global user.email "fankai@gmail.com"
 git config --global color.ui true
 git config --global &hellip;">
 	
@@ -96,7 +97,6 @@ git config --global &hellip;">
 	<div id="content" class="inner"><article class="post">
 	<h2 class="title">Git 常用命令备忘</h2>
 	<div class="entry-content"><p>Git配置</p>
-
 <pre><code>git config --global user.name "robbin"   
 git config --global user.email "fankai@gmail.com"
 git config --global color.ui true
@@ -105,16 +105,13 @@ git config --global alias.ci commit
 git config --global alias.st status
 git config --global alias.br branch
 git config --global core.editor "mate -w"    # 设置Editor使用textmate
-git config -l  # 列举所有配置</pre>
+git config -l  # 列举所有配置</code>
+用户的git配置文件~/.gitconfig
 
+Git常用命令
+查看、添加、提交、删除、找回，重置修改文件
 
-<p></code>
-用户的git配置文件~/.gitconfig</p>
-
-<p>Git常用命令
-查看、添加、提交、删除、找回，重置修改文件</p>
-
-<pre><code>git help <command>  # 显示command的help
+<pre><code>git help <command />  # 显示command的help
 git show            # 显示某次提交的内容
 git show $id
 
@@ -137,39 +134,30 @@ git ci -a           # 将git add, git rm和git ci等操作都合并在一起做
 git ci -am "some comments"
 git ci --amend      # 修改最后一次提交记录
 
-git revert <$id>    # 恢复某次提交的状态，恢复动作本身也创建了一次提交对象
-git revert HEAD     # 恢复最后一次提交的状态</pre>
-
-
-<p></code>
-查看文件diff</p>
+git revert &lt;$id&gt;    # 恢复某次提交的状态，恢复动作本身也创建了一次提交对象
+git revert HEAD     # 恢复最后一次提交的状态
+查看文件diff
 
 <pre><code>git diff <file>     # 比较当前文件和暂存区文件差异
 git diff
-git diff <$id1> <$id2>   # 比较两次提交之间的差异
+git diff &lt;$id1&gt; &lt;$id2&gt;   # 比较两次提交之间的差异
 git diff <branch1>..<branch2> # 在两个分支之间比较 
 git diff --staged   # 比较暂存区和版本库差异
 git diff --cached   # 比较暂存区和版本库差异
-git diff --stat     # 仅仅比较统计信息</pre>
-
-
-<p></code>
-查看提交记录</p>
+git diff --stat     # 仅仅比较统计信息
+查看提交记录
 
 <pre><code>git log
 git log <file>      # 查看该文件每次提交记录
 git log -p <file>   # 查看每次详细修改内容的diff
 git log -p -2       # 查看最近两次详细修改内容的diff
-git log --stat      # 查看提交统计信息</pre>
+git log --stat      # 查看提交统计信息
+tig
 
+Mac上可以使用tig代替diff和log，brew install tig
 
-<p></code>
-tig</p>
-
-<p>Mac上可以使用tig代替diff和log，brew install tig</p>
-
-<p>Git 本地分支管理
-查看、切换、创建和删除分支</p>
+Git 本地分支管理
+查看、切换、创建和删除分支
 
 <pre><code>git br -r           # 查看远程分支
 git br <new_branch> # 创建新的分支
@@ -185,26 +173,19 @@ git co $id          # 把某次历史提交记录checkout出来，但无分支�
 git co $id -b <new_branch>  # 把某次历史提交记录checkout出来，创建成一个分支
 
 git br -d <branch>  # 删除某个分支
-git br -D <branch>  # 强制删除某个分支 (未被合并的分支被删除的时候需要强制)</pre>
-
-
-<p></code>
-分支合并和rebase</p>
+git br -D <branch>  # 强制删除某个分支 (未被合并的分支被删除的时候需要强制)
+分支合并和rebase
 
 <pre><code>git merge <branch>               # 将branch分支合并到当前分支
 git merge origin/master --no-ff  # 不要Fast-Foward合并，这样可以生成merge提交
 
 git rebase master <branch>       # 将master rebase到branch，相当于：
-git co <branch> && git rebase master && git co master && git merge <branch>
+git co <branch> &amp;&amp; git rebase master &amp;&amp; git co master &amp;&amp; git merge <branch>
 Git补丁管理(方便在多台机器上开发同步时用)
-git diff > ../sync.patch         # 生成补丁
+git diff &gt; ../sync.patch         # 生成补丁
 git apply ../sync.patch          # 打补丁
-git apply --check ../sync.patch  # 测试补丁能否成功</pre>
-
-
-<p></code>
-Git暂存管理</p>
-
+git apply --check ../sync.patch  # 测试补丁能否成功
+Git暂存管理
 <pre><code>git stash                        # 暂存
 git stash list                   # 列所有stash
 git stash apply                  # 恢复暂存的内容
@@ -222,41 +203,29 @@ git push origin master           # 将本地主分支推到远程主分支
 git push -u origin master        # 将本地主分支推到远程(如无远程主分支则创建，用于初始化远程仓库)
 git push origin <local_branch>   # 创建远程分支， origin是远程仓库名
 git push origin <local_branch>:<remote_branch>  # 创建远程分支
-git push origin :<remote_branch>  #先删除本地分支(git br -d <branch>)，然后再push删除远程分支</pre>
-
-
-<p></code>
-Git远程仓库管理</p>
-
+git push origin :<remote_branch>  #先删除本地分支(git br -d <branch>)，然后再push删除远程分支
+Git远程仓库管理
 <pre><code>git remote -v                    # 查看远程服务器地址和仓库名称
 git remote show origin           # 查看远程服务器仓库状态
 git remote add origin git@github:robbin/robbin_site.git         # 添加远程仓库地址
 git remote set-url origin git@github.com:robbin/robbin_site.git # 设置远程仓库地址(用于修改远程仓库地址)
-git remote rm <repository>       # 删除远程仓库</pre>
-
-
-<p></code>
-创建远程仓库</p>
+git remote rm <repository>       # 删除远程仓库
+创建远程仓库
 
 <pre><code>git clone --bare robbin_site robbin_site.git  # 用带版本的项目创建纯版本仓库
 scp -r my_project.git git@git.csdn.net:~      # 将纯仓库上传到服务器上
 
-mkdir robbin_site.git && cd robbin_site.git && git --bare init # 在服务器创建纯仓库
+mkdir robbin_site.git &amp;&amp; cd robbin_site.git &amp;&amp; git --bare init # 在服务器创建纯仓库
 git remote add origin git@github.com:robbin/robbin_site.git    # 设置远程仓库地址
 git push -u origin master                                      # 客户端首次提交
 git push -u origin develop  # 首次将本地develop分支提交到远程develop分支，并且track
 
-git remote set-head origin master   # 设置远程仓库的HEAD指向master分支</pre>
-
-
-<p></code>
-也可以命令设置跟踪远程库和本地库</p>
+git remote set-head origin master   # 设置远程仓库的HEAD指向master分支</code>
+也可以命令设置跟踪远程库和本地库
 
 <pre><code>git branch --set-upstream master origin/master
-git branch --set-upstream develop origin/develop</pre>
-
-
-<p></code></p>
+git branch --set-upstream develop origin/develop</code>
+</pre></pre></repository></code></pre></branch></remote_branch></remote_branch></local_branch></local_branch></remote_branch></local_branch></code></pre></branch></branch></branch></branch></code></pre></branch></branch></new_branch></branch></new_branch></new_branch></branch></new_branch></code></pre></file></file></code></pre></branch2></branch1></file></code></pre></file></file></file></file></file></file></code></pre></pre>
 </div>
 
 

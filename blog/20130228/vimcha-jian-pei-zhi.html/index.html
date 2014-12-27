@@ -107,7 +107,6 @@
 <p>Vundle的安装很简单：</p>
 
 <p>git clone http://github.com/gmarik/vundle.git ~/.vim/bundle/vundle</p>
-
 <pre><code>然后写配置文件.vimrc：
 'set nocompatible    " be iMproved'
 filetype off        " required!
@@ -120,29 +119,23 @@ Bundle 'gmarik/vundle'
 Bundle 'vim-plugin-foo'
 Bundle 'vim-plugin-bar'
 filetype plugin indent on    " required!
-</pre>
+</code>
+其中Bundle后面的内容，就是插件的名字，插件维护在Vim-Script.org。
 
+然后，打开VIM之后，可以输入以下命令：
 
-<p></code>
-其中Bundle后面的内容，就是插件的名字，插件维护在Vim-Script.org。</p>
-
-<p>然后，打开VIM之后，可以输入以下命令：</p>
-
-<p>&#8220;安装插件:</p>
-
+&#8220;安装插件:
 <pre><code>:BundleInstall
 "更新插件:
 :BundleInstall!
 "卸载不在列表中的插件:
-:BundleClean</pre>
+:BundleClean</code>
+<bra>可以从Vim-Script.org找到很多你想要的插件的名字，然后在.vimrc中添加就可以了
 
 
-<p></code>
-<bra>可以从Vim-Script.org找到很多你想要的插件的名字，然后在.vimrc中添加就可以了</p>
+插件介绍
 
-<p>插件介绍</p>
-
-<p>有了Vundle，再装插件就是件享受的事情了。我常用的插件有：</p>
+有了Vundle，再装插件就是件享受的事情了。我常用的插件有：
 
 <pre><code>相较于Command-T等查找文件的插件，ctrlp.vim最大的好处在于没有依赖，干净利落
 Bundle 'ctrlp.vim'
@@ -185,11 +178,10 @@ Vundle的这个写法，是直接取该插件在Github上的repo
 
 
 Bundle 'Valloric/YouCompleteMe'
-<br>以上插件可以在vim-script.org找到源码和文档，ZenCoding和EasyMotion演示点链接,你会心动的。
-</pre>
+<br />以上插件可以在vim-script.org找到源码和文档，ZenCoding和EasyMotion演示点链接,你会心动的。
+</code>
 
-
-<p></code></p>
+</pre></bra></pre></pre>
 </div>
 
 

@@ -102,10 +102,10 @@
 
 <p>然后回到ubuntu或者Mac里面，仍然是在终端里面，输入：</p>
 
-<p> [[ -f ~/.ssh/id_rsa.pub ]] || ssh-keygen -t rsa
+<p>[[ -f ~/.ssh/id_rsa.pub ]] || ssh-keygen -t rsa
 按照默认提示一路确认，生成密钥之后，将生成的信息复制到github页面中，如下所示：</p>
 
-<p> [[ -f ~/.ssh/id_rsa.pub ]] &amp;&amp; cat ~/.ssh/id_rsa.pub | xclip
+<p>[[ -f ~/.ssh/id_rsa.pub ]] &amp;&amp; cat ~/.ssh/id_rsa.pub | xclip
 然后在浏览器中打开页面：</p>
 
 <p>https://github.com/account/ssh</p>
@@ -132,7 +132,7 @@ cd ~/dev/rubyonchina.github.com
 git remote add rubyonchina git@github.com:rubyonchina/rubyonchina.github.com.git
 新增一篇测试博客：</p>
 
-<p>rake new_post[&#8220;post title&#8221;]
+<p>rake new_post[“post title”]
 生成静态站点：</p>
 
 <p>rake generate
@@ -155,7 +155,7 @@ git remote add rubyonchina git@github.com:rubyonchina/rubyonchina.github.com.git
 <p>OK！成功！然后，此时，再创建一个新的github的source分支，用于保存写作的md源文件等。</p>
 
 <p>git add .
-git commit -m &#8220;some changes&#8221;
+git commit -m “some changes”
 git push rubyonchina source
 现在，你就拥有了一个强大的个人站点。</p>
 </div>

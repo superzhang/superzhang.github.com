@@ -115,12 +115,12 @@ using System.Xml;
 using System.Text;
 using System.Data.SqlClient;
 using System.Data;
-<br>
+<br />
 namespace Web.UI
 {
     public partial class Weixin : System.Web.UI.Page
     {
-        const string Token = "token";       //你的token
+        const string Token = "token";		//你的token
         protected string strJson = "";
         protected string DefaultOrganise;
         Lib.SqlHelper sqlHelper = new Lib.SqlHelper();
@@ -147,7 +147,7 @@ namespace Web.UI
         /// <summary>
         /// 返回信息结果(微信信息返回)
         /// </summary>
-        /// <param name="weixinXML"></param>
+        /// <param name="weixinXML" />
         private void ResponseMsg(string weixinXML)
         {
             //回复消息的部分:你的代码写在这里
@@ -172,13 +172,13 @@ namespace Web.UI
                 content = "现在是北京时间：" + string.Format("{0:f}", DateTime.Now);
             }
             string strresponse = "<xml>";
-            strresponse = strresponse + "<ToUserName><![CDATA[" + FromUserName + "]]></ToUserName>";
-            strresponse = strresponse + "<FromUserName><![CDATA[" + ToUserName + "]]></FromUserName>";
-            strresponse = strresponse + "<CreateTime>" + DateTime.Now.Ticks.ToString() + "</CreateTime>";
-            strresponse = strresponse + "<MsgType><![CDATA[text]]></MsgType>";
-            strresponse = strresponse + "<Content><![CDATA[" + content + "]]></Content>";
-            strresponse = strresponse + "<FuncFlag>0<FuncFlag>";
-            strresponse = strresponse + "</xml>";
+            strresponse = strresponse + "<tousername>&lt;![CDATA[" + FromUserName + "]]&gt;</tousername>";
+            strresponse = strresponse + "<fromusername>&lt;![CDATA[" + ToUserName + "]]&gt;</fromusername>";
+            strresponse = strresponse + "<createtime>" + DateTime.Now.Ticks.ToString() + "</createtime>";
+            strresponse = strresponse + "<msgtype>&lt;![CDATA[text]]&gt;</msgtype>";
+            strresponse = strresponse + "<content>&lt;![CDATA[" + content + "]]&gt;</content>";
+            strresponse = strresponse + "<funcflag>0<funcflag>";
+            strresponse = strresponse + "";
             WriteLog("postStr:" + content);
             Response.Write(strresponse);
         }
@@ -259,10 +259,8 @@ namespace Web.UI
         }
     }
 }
-</pre>
 
-
-<p></code></p>
+</summary></funcflag></funcflag></xml></code></pre>
 </div>
 
 
