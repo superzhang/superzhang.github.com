@@ -4,7 +4,7 @@
   <title><![CDATA[Castiel Blog]]></title>
   <link href="http://suerzhang.github.io/atom.xml" rel="self"/>
   <link href="http://suerzhang.github.io/"/>
-  <updated>2014-12-27T13:55:35+08:00</updated>
+  <updated>2014-12-27T13:56:41+08:00</updated>
   <id>http://suerzhang.github.io/</id>
   <author>
     <name><![CDATA[Castiel]]></name>
@@ -24,7 +24,7 @@
 ###添加评论
 在_config.yml 中添加</p>
 
-<p>{ %coderay % }
+<p>{ % coderay % }
 $$# duoshuo comments
 duoshuo_comments: true
 duoshuo_short_name: yourname #这里的yourname是你在多说注册的二级域名，比如我是superzhang.duoshuo.com.这里就填superzhang
