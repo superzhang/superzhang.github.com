@@ -139,143 +139,9 @@ duoshuo_comments: true &hellip;">
 </span><span class="line"><span class="p">{</span><span class="o">%</span> <span class="n">endif</span> <span class="o">%</span><span class="p">}</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div>
 
-<p>下方添<strong>加多说评论</strong>模块</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-<span class="line-number">4</span>
-<span class="line-number">5</span>
-<span class="line-number">6</span>
-</pre></td><td class="code"><pre><code class="py"><span class="line"><span class="p">{</span><span class="o">%</span> <span class="k">if</span> <span class="n">site</span><span class="o">.</span><span class="n">duoshuo_short_name</span> <span class="ow">and</span> <span class="n">site</span><span class="o">.</span><span class="n">duoshuo_comments</span> <span class="o">==</span> <span class="n">true</span> <span class="ow">and</span> <span class="n">page</span><span class="o">.</span><span class="n">comments</span> <span class="o">==</span> <span class="n">true</span> <span class="o">%</span><span class="p">}</span>
-</span><span class="line">  <span class="o">&lt;</span><span class="n">section</span><span class="o">&gt;</span>
-</span><span class="line">    <span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">Comments</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
-</span><span class="line">    <span class="o">&lt;</span><span class="n">div</span> <span class="nb">id</span><span class="o">=</span><span class="s">&quot;comments&quot;</span> <span class="n">aria</span><span class="o">-</span><span class="n">live</span><span class="o">=</span><span class="s">&quot;polite&quot;</span><span class="o">&gt;</span><span class="p">{</span><span class="o">%</span> <span class="n">include</span> <span class="n">post</span><span class="o">/</span><span class="n">duoshuo</span><span class="o">.</span><span class="n">html</span> <span class="o">%</span><span class="p">}</span><span class="o">&lt;/</span><span class="n">div</span><span class="o">&gt;</span>
-</span><span class="line">  <span class="o">&lt;/</span><span class="n">section</span><span class="o">&gt;</span>
-</span><span class="line"><span class="p">{</span><span class="o">%</span> <span class="n">endif</span> <span class="o">%</span><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<p>如果你希望一些单独的页面下方也放置评论功能，譬如 rake new_page[“xxx”] 产生的页面也能评论，那么请在 source/_layouts/page.html 中也做如上的修改。</p>
-
-<p>创建一个<strong>source/_includes/post/duoshuo.html</strong></p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-<span class="line-number">4</span>
-<span class="line-number">5</span>
-<span class="line-number">6</span>
-<span class="line-number">7</span>
-<span class="line-number">8</span>
-<span class="line-number">9</span>
-<span class="line-number">10</span>
-<span class="line-number">11</span>
-<span class="line-number">12</span>
-<span class="line-number">13</span>
-<span class="line-number">14</span>
-</pre></td><td class="code"><pre><code class="html"><span class="line"><span class="c">&lt;!-- Duoshuo Comment BEGIN --&gt;</span>
-</span><span class="line"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;ds-thread&quot;</span> <span class="na">data-title=</span><span class="s">&quot;添加多说评论&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
-</span><span class="line"><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">&quot;text/javascript&quot;</span><span class="nt">&gt;</span>
-</span><span class="line">  <span class="kd">var</span> <span class="nx">duoshuoQuery</span> <span class="o">=</span> <span class="p">{</span><span class="nx">short_name</span><span class="o">:</span><span class="s2">&quot;superzhang.duoshuo.com&quot;</span><span class="p">};</span>
-</span><span class="line">  <span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-</span><span class="line">    <span class="kd">var</span> <span class="nx">ds</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;script&#39;</span><span class="p">);</span>
-</span><span class="line">    <span class="nx">ds</span><span class="p">.</span><span class="nx">type</span> <span class="o">=</span> <span class="s1">&#39;text/javascript&#39;</span><span class="p">;</span><span class="nx">ds</span><span class="p">.</span><span class="nx">async</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
-</span><span class="line">    <span class="nx">ds</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="s1">&#39;http://static.duoshuo.com/embed.js&#39;</span><span class="p">;</span>
-</span><span class="line">    <span class="nx">ds</span><span class="p">.</span><span class="nx">charset</span> <span class="o">=</span> <span class="s1">&#39;UTF-8&#39;</span><span class="p">;</span>
-</span><span class="line">    <span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;head&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-</span><span class="line">    <span class="o">||</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;body&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]).</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">ds</span><span class="p">);</span>
-</span><span class="line">  <span class="p">})();</span>
-</span><span class="line"><span class="nt">&lt;/script&gt;</span>
-</span><span class="line"><span class="c">&lt;!-- Duoshuo Comment END --&gt;</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<p>随后，再修改<strong>_includes/article.html</strong> 在</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-</pre></td><td class="code"><pre><code class="py"><span class="line"><span class="p">{</span><span class="o">%</span> <span class="k">if</span> <span class="n">site</span><span class="o">.</span><span class="n">disqus_short_name</span> <span class="ow">and</span> <span class="n">page</span><span class="o">.</span><span class="n">comments</span> <span class="o">!=</span> <span class="n">false</span> <span class="ow">and</span> <span class="n">post</span><span class="o">.</span><span class="n">comments</span> <span class="o">!=</span> <span class="n">false</span> <span class="ow">and</span> <span class="n">site</span><span class="o">.</span><span class="n">disqus_show_comment_count</span> <span class="o">==</span> <span class="n">true</span> <span class="o">%</span><span class="p">}</span><span class="o">|</span> <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s">&quot;{</span><span class="si">% i</span><span class="s">f index %}{</span><span class="si">% e</span><span class="s">ndif %}#disqus_thread&quot;</span><span class="o">&gt;</span><span class="n">Comments</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span>
-</span><span class="line"><span class="p">{</span><span class="o">%</span> <span class="n">endif</span> <span class="o">%</span><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<p>下方添加如下代码</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-</pre></td><td class="code"><pre><code class="py"><span class="line"><span class="p">{</span><span class="o">%</span> <span class="k">if</span> <span class="n">site</span><span class="o">.</span><span class="n">duoshuo_short_name</span> <span class="ow">and</span> <span class="n">page</span><span class="o">.</span><span class="n">comments</span> <span class="o">!=</span> <span class="n">false</span> <span class="ow">and</span> <span class="n">post</span><span class="o">.</span><span class="n">comments</span> <span class="o">!=</span> <span class="n">false</span> <span class="ow">and</span> <span class="n">site</span><span class="o">.</span><span class="n">duoshuo_comments</span> <span class="o">==</span> <span class="n">true</span> <span class="o">%</span><span class="p">}</span><span class="o">|</span> <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s">&quot;{</span><span class="si">% i</span><span class="s">f index %}{</span><span class="si">% e</span><span class="s">ndif %}#comments&quot;</span><span class="o">&gt;</span><span class="n">Comments</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span>
-</span><span class="line">         <span class="p">{</span><span class="o">%</span> <span class="n">endif</span> <span class="o">%</span><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<p>###侧边栏插入最新评论</p>
-
-<p>首先在<strong>_config.yml</strong>中再插入如下代码</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-<span class="line-number">4</span>
-<span class="line-number">5</span>
-<span class="line-number">6</span>
-</pre></td><td class="code"><pre><code class="py"><span class="line"><span class="n">duoshuo_asides_num</span><span class="p">:</span> <span class="mi">10</span>      <span class="c"># 侧边栏评论显示条目数</span>
-</span><span class="line"><span class="n">duoshuo_asides_avatars</span><span class="p">:</span> <span class="mi">0</span>   <span class="c"># 侧边栏评论是否显示头像</span>
-</span><span class="line"><span class="n">duoshuo_asides_time</span><span class="p">:</span> <span class="mi">0</span>      <span class="c"># 侧边栏评论是否显示时间</span>
-</span><span class="line"><span class="n">duoshuo_asides_title</span><span class="p">:</span> <span class="mi">0</span>     <span class="c"># 侧边栏评论是否显示标题</span>
-</span><span class="line"><span class="n">duoshuo_asides_admin</span><span class="p">:</span> <span class="mi">0</span>     <span class="c"># 侧边栏评论是否显示作者评论</span>
-</span><span class="line"><span class="n">duoshuo_asides_length</span><span class="p">:</span> <span class="mi">18</span>   <span class="c"># 侧边栏评论截取的长度</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<p>再创建_includes/custom/asides/recent_comments.html</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-<span class="line-number">4</span>
-<span class="line-number">5</span>
-<span class="line-number">6</span>
-<span class="line-number">7</span>
-<span class="line-number">8</span>
-<span class="line-number">9</span>
-<span class="line-number">10</span>
-<span class="line-number">11</span>
-<span class="line-number">12</span>
-<span class="line-number">13</span>
-<span class="line-number">14</span>
-<span class="line-number">15</span>
-<span class="line-number">16</span>
-<span class="line-number">17</span>
-<span class="line-number">18</span>
-</pre></td><td class="code"><pre><code class="py"><span class="line"><span class="o">&lt;</span><span class="n">section</span><span class="o">&gt;</span>
-</span><span class="line"><span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span><span class="n">Recent</span> <span class="n">Comments</span><span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
-</span><span class="line"><span class="o">&lt;</span><span class="n">ul</span> <span class="n">class</span><span class="o">=</span><span class="s">&quot;ds-recent-comments&quot;</span> <span class="n">data</span><span class="o">-</span><span class="n">num</span><span class="o">-</span><span class="n">items</span><span class="o">=</span><span class="s">&quot;10&quot;</span> <span class="n">data</span><span class="o">-</span><span class="n">show</span><span class="o">-</span><span class="n">avatars</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="n">data</span><span class="o">-</span><span class="n">show</span><span class="o">-</span><span class="n">time</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="n">data</span><span class="o">-</span><span class="n">show</span><span class="o">-</span><span class="n">title</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="n">data</span><span class="o">-</span><span class="n">show</span><span class="o">-</span><span class="n">admin</span><span class="o">=</span><span class="s">&quot;0&quot;</span> <span class="n">data</span><span class="o">-</span><span class="n">excerpt</span><span class="o">-</span><span class="n">length</span><span class="o">=</span><span class="s">&quot;18&quot;</span><span class="o">&gt;&lt;/</span><span class="n">ul</span><span class="o">&gt;</span>
-</span><span class="line"><span class="p">{</span><span class="o">%</span> <span class="k">if</span> <span class="n">index</span> <span class="o">%</span><span class="p">}</span>
-</span><span class="line"><span class="o">&lt;</span><span class="err">!</span><span class="o">--</span><span class="err">多说</span><span class="n">js</span><span class="err">加载开始，一个页面只需要加载一次</span> <span class="o">--&gt;</span>
-</span><span class="line"><span class="o">&lt;</span><span class="n">script</span> <span class="nb">type</span><span class="o">=</span><span class="s">&quot;text/javascript&quot;</span><span class="o">&gt;</span>
-</span><span class="line">  <span class="n">var</span> <span class="n">duoshuoQuery</span> <span class="o">=</span> <span class="p">{</span><span class="n">short_name</span><span class="p">:</span><span class="s">&quot;superzhang.duoshuo.com&quot;</span><span class="p">};</span>
-</span><span class="line">  <span class="p">(</span><span class="n">function</span><span class="p">()</span> <span class="p">{</span>
-</span><span class="line">    <span class="n">var</span> <span class="n">ds</span> <span class="o">=</span> <span class="n">document</span><span class="o">.</span><span class="n">createElement</span><span class="p">(</span><span class="s">&#39;script&#39;</span><span class="p">);</span>
-</span><span class="line">    <span class="n">ds</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="s">&#39;text/javascript&#39;</span><span class="p">;</span><span class="n">ds</span><span class="o">.</span><span class="n">async</span> <span class="o">=</span> <span class="n">true</span><span class="p">;</span>
-</span><span class="line">    <span class="n">ds</span><span class="o">.</span><span class="n">src</span> <span class="o">=</span> <span class="s">&#39;http://static.duoshuo.com/embed.js&#39;</span><span class="p">;</span>
-</span><span class="line">    <span class="n">ds</span><span class="o">.</span><span class="n">charset</span> <span class="o">=</span> <span class="s">&#39;UTF-8&#39;</span><span class="p">;</span>
-</span><span class="line">    <span class="p">(</span><span class="n">document</span><span class="o">.</span><span class="n">getElementsByTagName</span><span class="p">(</span><span class="s">&#39;head&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span> <span class="o">||</span> <span class="n">document</span><span class="o">.</span><span class="n">getElementsByTagName</span><span class="p">(</span><span class="s">&#39;body&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span><span class="o">.</span><span class="n">appendChild</span><span class="p">(</span><span class="n">ds</span><span class="p">);</span>
-</span><span class="line">  <span class="p">})();</span>
-</span><span class="line"><span class="o">&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
-</span><span class="line"><span class="o">&lt;</span><span class="err">!</span><span class="o">--</span><span class="err">多说</span><span class="n">js</span><span class="err">加载结束，一个页面只需要加载一次</span> <span class="o">--&gt;</span>
-</span><span class="line"><span class="p">{</span><span class="o">%</span> <span class="n">endif</span> <span class="o">%</span><span class="p">}</span>
-</span><span class="line"><span class="o">&lt;/</span><span class="n">section</span><span class="o">&gt;</span><span class="err">`</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-<p>最后，在<strong>_config.yml</strong>中的blog_index_asides行或pages_asides行或post_asides添加</p>
-
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-</pre></td><td class="code"><pre><code class="py"><span class="line"><span class="n">custom</span><span class="o">/</span><span class="n">asides</span><span class="o">/</span><span class="n">recent_comments</span><span class="o">.</span><span class="n">html</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<p>rake generate</p>
-
-<p>rake preview
-下就可以看效果了 </p>
-
-
+<p>下方添<strong>加多说评论</strong>模块
 		
-		
+		<a href="/blog/20141227/tian-jia-duo-shuo-ping-lun.html/" class="more-link">阅读全文;</a>
 	</div>
 
 
@@ -322,9 +188,11 @@ duoshuo_comments: true &hellip;">
 	<div class="entry-content">
 		<p>本来是想给博客换个主题，加点功能来着，拖延了一个礼拜，明天就要回去上班了，主题还是没换好。</p>
 
-<p>记录几个参考链接
-<a href="http://shengmingzhiqing.com/">郝海龙的github博客</a>
-<a href="http://www.ituring.com.cn/article/775">markdown语法说明</a></p>
+<p>记录几个参考链接</p>
+
+<p><a href="http://shengmingzhiqing.com/">郝海龙的github博客</a></p>
+
+<p><a href="http://www.ituring.com.cn/article/775">markdown语法说明</a></p>
 
 
 		
@@ -429,19 +297,10 @@ duoshuo_comments: true &hellip;">
 			阅读</a>
 	</h2>
 	<div class="entry-content">
-		<p>iPad的出现，彻底打破了传统的阅读方式。我惊喜的发现这就是我想要的设备，在我还没有买iPhone的时候，我果断的入手了iPad1.虽然那时候的iPad是那么的笨重，屏幕只是那么的普通。但是那个尺寸，那个续航能力，那种体验是无法比拟的。甚至比我用mac电脑的感觉还要好。</p>
-
-<p>那时候用iPad看杂志、看书确实给我省了很多钱，很惭愧一直都看盗版的。还记得花钱买第一个正版的软件是字节社的《乔布斯传》其实并不能算是软件，却给我日后买正版软件的习惯打下了第一步。在windows上一直没有买软件的习惯，原来是没有吸引我的。当一个产品真正好的时候，用户还是会愿意花钱的。感谢乔布斯发明了app store，发明了iPad，发明了Mac。才会衍生出今天的字节社，多看，豆瓣阅读。没有一个好的阅读设备，这些虚拟的书城是没能那么繁荣的。</p>
-
-<p>我很喜欢买书，也喜欢看书，但是，更多的时候是买了书，然后放在那就是一年。而当我买了电子书以后，虽然以是长时间搁置，但是，有是，我会在睡觉的时候拿出iPad玩一下，然后就会打开阅读器看几页。在做火车的时候，我也不再只是听歌睡觉，也会拿出iPad看几页。当iPad mini的出现，更是提示了阅读的体验，尺寸和重量，无可比拟。我拥有了一台nexus 7。但是，总是觉得用起来很不爽。在用了一段时间之后还是入手了iPad mini。回顾这半年，买电子书也花了400左右了。豆瓣，字节社，多看都有买过。最早的时候很喜欢字节社，可以后来，感觉还是多看做的最好吧。</p>
-
-<p>我买的电子书</p>
-
-<p>·《乔布斯传》<br />·《精神流浪者》<br />·《失控》<br />·《艾伦·图灵传》<br />·《数字乌托邦》<br />·《上帝投骰子吗》<br />·《打造facebook》<br />·《海子诗全集》<br />·《观念的水位》<br />·《黑客》<br />·《20个月赚130亿》<br />·《7天治愈拖延症》</p>
-
+		<p>iPad的出现，彻底打破了传统的阅读方式。我惊喜的发现这就是我想要的设备，在我还没有买iPhone的时候，我果断的入手了iPad1.虽然那时候的iPad是那么的笨重，屏幕只是那么的普通。但是那个尺寸，那个续航能力，那种体验是无法比拟的。甚至比我用mac电脑的感觉还要好。
 
 		
-		
+		<a href="/blog/20130813/yue-du-he-xie-zuo.html/" class="more-link">阅读全文;</a>
 	</div>
 
 
@@ -496,77 +355,10 @@ duoshuo_comments: true &hellip;">
 
 <p>花了10个月的时间做世界环游，途经非洲，东南亚，澳洲，中南美洲里的17个国家和地区。这次旅行的主题就是冲浪和摄影。
 出席在香港，日本，美国和伦敦举行的会议
-启程时给O’Reilly出版公司写了一本书，书名叫做《JavaScript Web Applications》</p>
-
-<p>另外写了一本关于CoffeeScript的书，很快就会由O’Reilly公司出版。
-写了大量的开源库，例如Spine, Spine.Mobile, GFX, 和 Juggernaut.
-筹划了一个创业公司的框架
-出席伦敦2011FOWA会议
-最后，我在Twitter公司找到了一份工作
-　　那么，让我从一年前开始，那是2010年9月，我刚好从一个我合作创办的公司里出来，尽管这段经历是很有价值的，但无休无止的长时间苦干让我精疲力尽。我回到了英格兰，需要对未来做一些思考。我一直有一个梦想——移居美国(几年就好)，所以，我在Google记事本上写了下面的话：</p>
-
-<p>人生的选择：
-  去纽约哥伦比亚大学深造
-    坏处 - 非常昂贵，并不一定能学到什么真正有用的东西，无聊?
-    好处 - 那是一个纽约的大学！
-  写一本书，申请 01 签证
-    坏处 - 需要大量的时间，有风险
-    好处 - 对事业有好处，有趣
-  等待。去纽约度一次假(3个月)。等待创业签证。
-    很容易 - 不是那么有趣</p>
-
-<p>也许选第二个，不行就选3？
-　　最终我选择了2，我已经对JavaScript web应用研究了很久，我要写一本这方面的书，为什么不边做环游世界的旅行、边写书呢？这也是我一个梦想呀。我从oneworld买了一份环游世界的机票(比你们想象的要便宜)，决定下周去我的第一站，南非。</p>
-
-<p>　　如果你从来没有到过非洲，你应该去一次。那里的景色原始而美丽，对那些没有体验过这种景色的人，你很难用言语描绘明白。几年前我就喜欢上了南方，那时我在东海岸做了一个为期3个月的冲浪旅行。这次，我只有一个月的时间，穿越特兰斯凯，从开普敦到德班。当我在南非旅行时，我的写作也开始了，把早期向O’Reilly提交的书的框架里的数章填充了材料。</p>
-
-<p>　　特兰斯凯是南非非常具有乡野特色的地方，到处是连绵的小山，一些小村庄和土堆的茅屋。他们仍然沿袭着酋长制度，有一个首领，大多数的当地人靠捕鱼为生。我们在高低不平的土路上颠了两天才到达我心仪的地方，一个美丽的海湾，叫做咖啡湾(Coffee Bay)。在那里，我休整了一下，从网上下载了一些相关资料，为更远的海湾远征做准备。</p>
-
-<p>　　我还清晰的记得我们走了数里地来到那个未开垦的海滩，我们从那些一个个被黄沙和小丘孤立的村庄穿行而过。有一个地方，我们要过一条大河，我们需要游过去，我把背包举过头顶，以免里面的相机和iPod遇到水。非洲是一个让你脱离尘世的地方，解放你的思想，重新认识人生最重要的东西是什么。</p>
-
-<p>　　下一站是香港，在那里，我度过了我的21岁生日，接着，我从陆路由新加坡到越南河内。很多人不相信香港70%的面积由自然公园覆盖，我徒步走了几条精彩的景观路线，非常的精彩壮观，比如：香港龙脊。有几天，我在boot.hk这个网站上闲逛，这是一个协作工作的网站，我顺便教了一个同行的游客如何使用ruby。然后，到了夜里，我跟Soho里的一些冲浪爱好者狂欢到凌晨。</p>
-
-<p>　　从泰国到柬埔寨到越南是我这次旅行中做喜欢的部分，如果你从没有到过亚洲，你绝对应该去一次。这些国家非常的漂亮，气候非常的好，食物美味可口，人们非常友善。吴哥窟是世上最神奇的地方之一，每个人都应该去看看。是Trey Ratcliff的照片把我吸引到了那里，我的很多其它旅游目的地也是受了他的影响。那个家伙是很多旅游地的第一宣传者。</p>
-
-<p>　　在一些无名的小博客中，我听有人说过一个很远的美丽的小岛，在柬埔寨的海边。说小岛的Sihanoukville这个地方有个酒吧，说只能坐小渔船到那里。我，还有几个非常好的朋友，乘坐晚上的大巴，开始寻找这个传说中的酒吧。搜索差不多进行了一整天，每一个问过的酒吧都把我们指向另外一个酒吧。最终，我们问了出来，并在第二天早晨做短程巴士去了那个地方。</p>
-
-<p>　　上面的照片上是海岸边一个10美元一晚的小木屋。从当地居民区离开后，我们的队伍像小岛上唯一的人，我们随性自由的奔跑。白天我们懒懒的躺在海滩上，吃着岛上厨师准备的鲜美可口的水果沙拉，在夜晚，我们在到处是浮游生物的海里游泳。</p>
-
-<p>　　下一站是越南，我们沿着湄公河支流来到一个边界上的小镇，我们是这里唯一的西方人，交流成了最大的问题。幸运的是，我们发现一个也许是镇上唯一会说英语的人，他骑车当我们的向导。当我的信用卡被那里的一个自动取款机吞掉了后，他提供了我很大的帮助！</p>
-
-<p>　　我们的队伍分成了几路，在我到达越南时，我的书正在按计划完成，进行的非常顺利。此时，我在西贡多待了几周，让我在书的好几章上有了重大的进展，正好是中国旧历新年，气氛非常的壮观热闹。</p>
-
-<p>　　接着是日本，澳大利亚，新西兰和夏威夷。我很难把我所有的感受都在这篇文章里写出来，但说这是此生难忘的一段历程是不为过的。把如此多的美景都放到一个国家里，太让人赞叹了,我说的正是新西兰。我最喜爱的一段记忆是沿着Wanaka的一个湖边在阳光下跑步，还有就是背着食物和生活用品，徒步数天穿越Routeburn的大山。在这个国家的旅途中，我结识了好几个值得一生相伴的好友。这是一个真正的天堂。</p>
-
-<p>　　就在我环绕新西兰的南部岛屿时，我的书终于完成了，提交给了技术编辑校对。</p>
-
-<p>　　接下来是纽约和旧金山，这两个神奇的地方到处是天才的程序员，有些人我很幸运的认识。Techcrunch Disrupt办的很精彩(我高度推荐hackathon)。</p>
-
-<p>　　在从纽约到旧金山的中途停留期间，我在各种公司了进行了不少的求职面试，最终在Twitter公司找到了一份做前端开发的工作。要在那里和杰出的团队一起工作，我不能不高兴的颤抖，而去旧金山，同样也是我此生的一个梦想。</p>
-
-<p>　　当签证的事办下来了后，我去了中、南美洲旅行，同时开发了我的一个小工程：一个JavaScript MVC框架库，叫做Spine。我到了哥斯达黎加，巴拿马，秘鲁，Bolvia，和阿根廷。 秘鲁是我的最爱，尽管那里的海拔给我带来了不少麻烦，我大部分的时间都在探险。下面的图片是哥斯达黎加传说中神奇猎鹰，是在我爬下世界最深的峡谷时拍到的。</p>
-
-<p>　　当我在哥斯达黎加时，微博上有个叫Roberto的家伙给我发了条信息，说他读了我的书，问我是否有兴趣一起冲浪。我欣然同意，坐上去圣何塞的汽车，在几天后和他会了面。那天我们一起在他海边的公寓里开发Spine和Ruby项目，使用移动硬盘，用汽车电源给笔记本充电。当电量不足后，让太阳能板补充能量，我们去冲浪。</p>
-
-<p>　　我推荐大家去写一本书，特别是边旅游边写书。可以想象，如果我不去旧金山去看一看，我可能还在旅途中，做顾问，去创业。当作家并不能让你直接的挣到很多钱，但它绝对能提升你的身份地位，给你带来很多潜在的机会。事实上，写作过程让我真正享受的是，我可以认真深入的研究一个题目。</p>
-
-<p>　　这一年是我这辈子目前为止最好的一年，而我感觉今后的一年会更好。当我如今定居下来后，我并没有感觉旅行对我的吸引力减少了；我始终把签证放到一个口袋里，而另一个口袋里装着钱包，当召唤降临，随时准备离开。</p>
-
-<p>　　可是，这篇文章并不是关于我的旅行，它是要发送一个信号：</p>
-
-<p>　　对于程序员来说，有个得天独厚的条件，就是这种职业可以远程工作或边旅游边工作，这是其它职业办不到的。当然，也不都是这样，在我的旅途中，我没有碰到第二个跟我的做法相似的程序员。这种情况让人悲哀。我想向程序员们送出的信息是，不要再找借口了，行动起来，你可以做到。一个人只有一生，我可以向你保证，这样的生活才不枉世间走这一遭。</p>
-
-<p>　　就像我，我感到极度的幸运，能这样的生活，去发现我的热情所在，去做每天我喜欢做的事情。你可以看出，大部分我现在的境遇并非偶然或侥幸，这是计划，追求，工作的结果。</p>
-
-<p>一份汗水，一份收成。
-　　这篇文章的目标不是做一些自我陶醉似的炫耀和大话，而是向大家演示如何立下目标，鼓励大家去做相似的事情。想清楚你现在的处境，这一年内你想得到什么，制定出一系列具体的能让你到达这些目标的步骤。追随你的梦想。</p>
-
-<p>本文由“外刊IT评论”网(www.aqee.net)荣誉出品
-[英文原文：Traveling, Writing and Programming ]</p>
-
+启程时给O’Reilly出版公司写了一本书，书名叫做《JavaScript Web Applications》
 
 		
-		
+		<a href="/blog/20130730/na-xie-niu-ren-yao.html/" class="more-link">阅读全文;</a>
 	</div>
 
 
@@ -671,16 +463,10 @@ duoshuo_comments: true &hellip;">
 	<div class="entry-content">
 		<p>昨天晚上把老罗的锤子科技rom发布会的官方视频看了下，跟之前的报道感觉完全不一样。图文的报道根本体现不出老罗的情怀。</p>
 
-<p>老罗说的好，在可以和人文的路上，我只看到了乔布斯的坟墓孤零零的立在那里。iPhone的出现，改变了我们的生活，改变了手机行业，改变了审美，改变了设计，也改变了我的人生。如果不是对iphone的喜欢，我估计还不知道去做什么。之前也尝试过做安卓的开发，但是，写了个hello world以后就放弃了。可以说给ios系统写程序也是一种享受。</p>
-
-<p>现在有多少公司能想老罗这样，能那么有情怀，能做出那么多细节的改进，那么多人性化的设计，为了这个rom，我都打算去尝试安卓的手机了，之前让我冲动的也只有小米，不过后来，鼓动室友买了，尝试了下，也就没入手了。安卓的体验还是比苹果差很多。</p>
-
-<p>老罗说：他是在用生命说牛逼的人。我最近在思考，到底是个怎么样的经历，能出这么样的一个人，高中没毕业，去新东方学英语，然后任教，再出来自创英语培训，再创立锥子科技公司。你总会发现，他是越来越厉害，越来越让你欣赏佩服。</p>
-
-<p>最近在微信上看到一些公众账号的大牛说，年前的时候真应该多看书，多旅行。我觉的确实是，走过的地方多了，你会开阔眼界，看的说多了，你开阔思路。人的一生不应该按部就班，而应该多点不一样的色彩。</p>
+<p>老罗说的好，在可以和人文的路上，我只看到了乔布斯的坟墓孤零零的立在那里。iPhone的出现，改变了我们的生活，改变了手机行业，改变了审美，改变了设计，也改变了我的人生。如果不是对iphone的喜欢，我估计还不知道去做什么。之前也尝试过做安卓的开发，但是，写了个hello world以后就放弃了。可以说给ios系统写程序也是一种享受。
 
 		
-		
+		<a href="/blog/20130404/lao-luo-%2Ccui-zhui-zi-ke-ji-he-ta-de-qing-huai.html/" class="more-link">阅读全文;</a>
 	</div>
 
 
@@ -737,127 +523,8 @@ git config --global core.editor "mate -w"    # 设置Editor使用textmate
 git config -l  # 列举所有配置</code>
 用户的git配置文件~/.gitconfig
 
-Git常用命令
-查看、添加、提交、删除、找回，重置修改文件
-
-<pre><code>git help <command />  # 显示command的help
-git show            # 显示某次提交的内容
-git show $id
-
-git co  -- <file>   # 抛弃工作区修改
-git co  .           # 抛弃工作区修改
-
-git add <file>      # 将工作文件修改提交到本地暂存区
-git add .           # 将所有修改过的工作文件提交暂存区
-
-git rm <file>       # 从版本库中删除文件
-git rm <file> --cached  # 从版本库中删除文件，但不删除文件
-
-git reset <file>    # 从暂存区恢复到工作文件
-git reset -- .      # 从暂存区恢复到工作文件
-git reset --hard    # 恢复最近一次提交过的状态，即放弃上次提交后的所有本次修改
-
-git ci <file>
-git ci .
-git ci -a           # 将git add, git rm和git ci等操作都合并在一起做
-git ci -am "some comments"
-git ci --amend      # 修改最后一次提交记录
-
-git revert &lt;$id&gt;    # 恢复某次提交的状态，恢复动作本身也创建了一次提交对象
-git revert HEAD     # 恢复最后一次提交的状态
-查看文件diff
-
-<pre><code>git diff <file>     # 比较当前文件和暂存区文件差异
-git diff
-git diff &lt;$id1&gt; &lt;$id2&gt;   # 比较两次提交之间的差异
-git diff <branch1>..<branch2> # 在两个分支之间比较 
-git diff --staged   # 比较暂存区和版本库差异
-git diff --cached   # 比较暂存区和版本库差异
-git diff --stat     # 仅仅比较统计信息
-查看提交记录
-
-<pre><code>git log
-git log <file>      # 查看该文件每次提交记录
-git log -p <file>   # 查看每次详细修改内容的diff
-git log -p -2       # 查看最近两次详细修改内容的diff
-git log --stat      # 查看提交统计信息
-tig
-
-Mac上可以使用tig代替diff和log，brew install tig
-
-Git 本地分支管理
-查看、切换、创建和删除分支
-
-<pre><code>git br -r           # 查看远程分支
-git br <new_branch> # 创建新的分支
-git br -v           # 查看各个分支最后提交信息
-git br --merged     # 查看已经被合并到当前分支的分支
-git br --no-merged  # 查看尚未被合并到当前分支的分支
-
-git co <branch>     # 切换到某个分支
-git co -b <new_branch> # 创建新的分支，并且切换过去
-git co -b <new_branch> <branch>  # 基于branch创建新的new_branch
-
-git co $id          # 把某次历史提交记录checkout出来，但无分支信息，切换到其他分支会自动删除
-git co $id -b <new_branch>  # 把某次历史提交记录checkout出来，创建成一个分支
-
-git br -d <branch>  # 删除某个分支
-git br -D <branch>  # 强制删除某个分支 (未被合并的分支被删除的时候需要强制)
-分支合并和rebase
-
-<pre><code>git merge <branch>               # 将branch分支合并到当前分支
-git merge origin/master --no-ff  # 不要Fast-Foward合并，这样可以生成merge提交
-
-git rebase master <branch>       # 将master rebase到branch，相当于：
-git co <branch> &amp;&amp; git rebase master &amp;&amp; git co master &amp;&amp; git merge <branch>
-Git补丁管理(方便在多台机器上开发同步时用)
-git diff &gt; ../sync.patch         # 生成补丁
-git apply ../sync.patch          # 打补丁
-git apply --check ../sync.patch  # 测试补丁能否成功
-Git暂存管理
-<pre><code>git stash                        # 暂存
-git stash list                   # 列所有stash
-git stash apply                  # 恢复暂存的内容
-git stash drop                   # 删除暂存区
-Git远程分支管理
-git pull                         # 抓取远程仓库所有分支更新并合并到本地
-git pull --no-ff                 # 抓取远程仓库所有分支更新并合并到本地，不要快进合并
-git fetch origin                 # 抓取远程仓库更新
-git merge origin/master          # 将远程主分支合并到本地当前分支
-git co --track origin/branch     # 跟踪某个远程分支创建相应的本地分支
-git co -b <local_branch> origin/<remote_branch>  # 基于远程分支创建本地分支，功能同上
-
-git push                         # push所有分支
-git push origin master           # 将本地主分支推到远程主分支
-git push -u origin master        # 将本地主分支推到远程(如无远程主分支则创建，用于初始化远程仓库)
-git push origin <local_branch>   # 创建远程分支， origin是远程仓库名
-git push origin <local_branch>:<remote_branch>  # 创建远程分支
-git push origin :<remote_branch>  #先删除本地分支(git br -d <branch>)，然后再push删除远程分支
-Git远程仓库管理
-<pre><code>git remote -v                    # 查看远程服务器地址和仓库名称
-git remote show origin           # 查看远程服务器仓库状态
-git remote add origin git@github:robbin/robbin_site.git         # 添加远程仓库地址
-git remote set-url origin git@github.com:robbin/robbin_site.git # 设置远程仓库地址(用于修改远程仓库地址)
-git remote rm <repository>       # 删除远程仓库
-创建远程仓库
-
-<pre><code>git clone --bare robbin_site robbin_site.git  # 用带版本的项目创建纯版本仓库
-scp -r my_project.git git@git.csdn.net:~      # 将纯仓库上传到服务器上
-
-mkdir robbin_site.git &amp;&amp; cd robbin_site.git &amp;&amp; git --bare init # 在服务器创建纯仓库
-git remote add origin git@github.com:robbin/robbin_site.git    # 设置远程仓库地址
-git push -u origin master                                      # 客户端首次提交
-git push -u origin develop  # 首次将本地develop分支提交到远程develop分支，并且track
-
-git remote set-head origin master   # 设置远程仓库的HEAD指向master分支</code>
-也可以命令设置跟踪远程库和本地库
-
-<pre><code>git branch --set-upstream master origin/master
-git branch --set-upstream develop origin/develop</code>
-</pre></pre></repository></code></pre></branch></remote_branch></remote_branch></local_branch></local_branch></remote_branch></local_branch></code></pre></branch></branch></branch></branch></code></pre></branch></branch></new_branch></branch></new_branch></new_branch></branch></new_branch></code></pre></file></file></code></pre></branch2></branch1></file></code></pre></file></file></file></file></file></file></code></pre></pre>
-
 		
-		
+		<a href="/blog/20130309/git-chang-yong-ming-ling-bei-wang.html/" class="more-link">阅读全文;</a>
 	</div>
 
 
@@ -902,98 +569,10 @@ git branch --set-upstream develop origin/develop</code>
 			Vim插件配置</a>
 	</h2>
 	<div class="entry-content">
-		<p>看到别人的博客介绍Vundle之前，我用Pathogen管理插件。Pathogen还算方便，只需要把相应插件，放在bundle目录下即可，不需要很复杂的设置，管理起来也一目了然，而且当第一次使用vim的时候，你会觉的很容易上手。</p>
-
-<p>感谢现在的互联网，能让我看到很多好的东西，能让我很容易能上手神奇vim，如果没有那么多插件，vim只能觉的很普通一样。Vundel的插件安装逻辑结构是这样的：</p>
-
-<p>在Vim Script选好你想要的插件；
-在VIM的配置文件中写一句 Bundle plugin_name；
-执行一下Vundle的初始化命令，插件就装好了； - 升级和卸载也是同样的简单；
-完美的世界！</p>
-
-<p>Vundle的配置</p>
-
-<p>Vundle的安装很简单：</p>
-
-<p>git clone http://github.com/gmarik/vundle.git ~/.vim/bundle/vundle</p>
-<pre><code>然后写配置文件.vimrc：
-'set nocompatible    " be iMproved'
-filetype off        " required!
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-" let Vundle manage Vundle
-" required!
-Bundle 'gmarik/vundle'
-"vim-scripts repos
-Bundle 'vim-plugin-foo'
-Bundle 'vim-plugin-bar'
-filetype plugin indent on    " required!
-</code>
-其中Bundle后面的内容，就是插件的名字，插件维护在Vim-Script.org。
-
-然后，打开VIM之后，可以输入以下命令：
-
-&#8220;安装插件:
-<pre><code>:BundleInstall
-"更新插件:
-:BundleInstall!
-"卸载不在列表中的插件:
-:BundleClean</code>
-<bra>可以从Vim-Script.org找到很多你想要的插件的名字，然后在.vimrc中添加就可以了
-
-
-插件介绍
-
-有了Vundle，再装插件就是件享受的事情了。我常用的插件有：
-
-<pre><code>相较于Command-T等查找文件的插件，ctrlp.vim最大的好处在于没有依赖，干净利落
-Bundle 'ctrlp.vim'
-
-在输入()，""等需要配对的符号时，自动帮你补全剩余半个
-Bundle 'AutoClose'
-
-神级插件，ZenCoding可以让你以一种神奇而无比爽快的感觉写HTML、CSS
-Bundle 'ZenCoding.vim'
-
-在()、""、甚至HTML标签之间快速跳转；
-Bundle 'matchit.zip'
-
-显示行末的空格；
-Bundle 'ShowTrailingWhitespace'
-
-JS代码格式化插件；
-Bundle '_jsbeautify'
-
-用全新的方式在文档中高效的移动光标，革命性的突破
-Bundle 'EasyMotion'
-
-自动识别文件编码；
-Bundle 'FencView.vim'
-
-必不可少，在VIM的编辑窗口树状显示文件目录
-Bundle 'The-NERD-tree'
-
-NERD出品的快速给代码加注释插件，选中，`ctrl+h`即可注释多种语言代码；
-Bundle 'The-NERD-Commenter'
-
-解放生产力的神器，简单配置，就可以按照自己的风格快速输入大段代码。
-Bundle 'UltiSnips'
-
-让代码更加易于纵向排版，以=或,符号对齐
-Bundle 'Tabular'
-
-迄今位置最好的自动VIM自动补全插件了吧
-Vundle的这个写法，是直接取该插件在Github上的repo
-
-
-Bundle 'Valloric/YouCompleteMe'
-<br />以上插件可以在vim-script.org找到源码和文档，ZenCoding和EasyMotion演示点链接,你会心动的。
-</code>
-
-</pre></bra></pre></pre>
+		<p>看到别人的博客介绍Vundle之前，我用Pathogen管理插件。Pathogen还算方便，只需要把相应插件，放在bundle目录下即可，不需要很复杂的设置，管理起来也一目了然，而且当第一次使用vim的时候，你会觉的很容易上手。
 
 		
-		
+		<a href="/blog/20130228/vimcha-jian-pei-zhi.html/" class="more-link">阅读全文;</a>
 	</div>
 
 
@@ -1012,6 +591,10 @@ Bundle 'Valloric/YouCompleteMe'
 
 <time datetime="2013-02-28T21:06:00+08:00" pubdate data-updated="true">Feb 28<span>th</span>, 2013</time></div>
 	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/技术/'>技术</a>
+
 
 </div>
 	
@@ -1036,37 +619,8 @@ Bundle 'Valloric/YouCompleteMe'
 	<div class="entry-content">
 		<p><a href="http://lihuazhi.com/561">原文</a>
    <br />你受过良好的教育，有意无意间说起自己的大学，旁人无一例外纷纷投来艳羡目光。你工作光鲜，不是四大就是4A，不是垄断国企就是全球500强；在一个都是中国人的公司里互相叫对方英文名。你衣食无忧，三个月工资买一LV包；你生活清闲，上班时就像神九的航天员，明明啥事没干还要装出一副很忙的样子；你格调不俗，业余时间不是昆曲就是话剧，不是民谣专场就是妈妈咪呀；你善良正义，身处斗室，胸怀天下，每天吃饱饭就刷刷微博拯救中国。
-　　<br />你用苹果，买个五千块的马脸iPhone，又是贴膜又是镶钻，十天换八个壳；你用谷歌，买个两千块的安卓手机，又是S-OFF又是ROOT，十天刷八个ROM。你关注互联网，精通电子产品，上机锋网威锋网雷锋网，电脑里永远装着十个GTD软件八个思维导图软件，用Instagram记录生活，对乔布斯比对你爸还了解，以果粉自居并喜欢到论坛上问：iOS6完美越狱什么时候出来啊？
-　　<br />你发烧，你还发骚，出门带着IPC，用麻绳绑个随身耳放，再配一对ER4P入耳式耳塞，完全隔音，也不怕被车撞死。嫌不够惹眼？那就换一副时下最流行的魔声Beats Pro头戴式耳机，每一个苹果旗舰店的配件区里都有卖，它颜色鲜艳外形时尚，两个耳朵每边印着一个b，挂在你的头上，真是实至名归。
-　　<br />你叫自己“吃货”，可怜的娃从小在城里长大没吃过什么好东西，为了美食频道里推荐的坑爹路边摊，坐10块钱地铁从城南干到城北。你热爱美食，每次花十分钟炒菜，二十分钟摆盘，三十分钟拍照，拍好导进PhotoShop里用康熙字典体配上两句文言文，传到博客上豆瓣上微博上。
-　　<br />你文艺青年，琴棋书画样样不通，格律没搞懂就敢写古诗词，最爱莎士比亚的英雄双行体。你只到电影院看电影，提到外国电影从不说中文名，也不说英文名，管《指环王》叫LOTR，《蝙蝠侠3》叫TDKR，倍洋气倍有面子。你一听到维瓦尔第的《四季》，就会想起波光粼粼的日内瓦湖和白雪皑皑的阿尔卑斯山。
-　　<br />终于有一天，当你拿着一张音乐会赠票睡死在钢琴声中，当你附庸风雅跑去看毕加索画展却一张画也没看懂，你突然意识到了自己的浅薄。没有金刚钻，怎装瓷器逼？没有付出，哪来收获？
-　　<br />装逼没有那么容易，才会特别让人着迷。
-　　<br />你开始认认真真地看书，时间宝贵，你只看经典，抬手就是中华书局、上海古籍，各种珍本善本影印本，横排版的书不看，简体字的书不看。理论学习也不能落下，商务印书馆汉译世界学术名著丛书买它个几十本回来，黄的绿的橙的蓝的，书架上一排彩虹。
-　　<br />你偷偷把手机铃声从《我的歌声里》换成肖邦的夜曲，王菲、张国荣的CD扔掉，你万青，你痛仰，你Pink Floyd，你Guns N’ Roses，你从流行听到爵士，从摇听到古典，别人问起你最喜欢的歌手，你四十五度角仰望星空，眼神虔诚地说出一句：“In Bach We Trust。”念到Bach的ch时上腭抬高，发成“喝哈”轻读加连读的效果，一口纯正的柏林口音，德味！
-　　<br />数码单反是不能再用了，现在连旅游团的大叔大妈们都人手一只无敌兔了。相机一定得是胶片的，胶片一定得是120的，拉开你们家冰箱，啥吃的没有，满满的全是胶卷——还必须得是过期的。
-　　<br />国内景点是不能再去了，水乡古镇全是搞一夜情的，西藏全是又酸又穷除了会辞职什么都不会的城市小白领。你背包，你户外，你特立独行无所畏惧，你穿Columbia防水鞋、NorthFace冲锋衣，你用GPS迷了路，在黄山的雨夜里发出求救信息。
-　　<br />你张开双手去生活去爱，你受了伤害，你的小心脏扎满绷带。你痛不欲生，你长夜痛哭过人生，痛完哭完后你顿悟你看透你蜕变，你长了一分智慧叫阅历，你多了一分气质叫成熟。你情感专家，你麻辣教师，你知性姐姐。你豆瓣粉丝几万，微博粉丝几十万，你吊了个有房有车有钱的金龟婿，然后教小姑娘们什么是爱情；你一天到晚不干正事，然后教小朋友们如何治疗拖延症；你做了个朝九晚五的无趣上班族，然后教大学生们别放弃梦想。你读书写字做主妇，你把体内毒素分泌成畅销书。你解答粉丝来信，聆听读者倾述，你款到发货，话到病除。你忙着生产一种叫“正能量”的东西，没有它，你的读者将无以为继，夜夜痛哭。
-　　<br />你研习人类学、社会学、历史学、植物学、建筑学、心理学，你掌握六门外语：英语、法语、德语、日语、西班牙语、铁岭话，你知道康熙他小舅的二大爷哪年死的，你分得清古典柱式认得出欧洲广场，你叫得出路边一花一草的科属名字，你开口M2闭口流通性过剩，你和同好攒了个铅笔经济研究社，研究除了经济学以外的任何东西。
-　　<br />只有门外汉才会在听古典音乐的时候想到什么画面，你谈论的是作品的母题、动机、织体、转调、升降、横向展开的层次与纵向展开的速度。你告诉还在听莫扎特“我不想不想长大”和贝多芬“当当当当”的新手：不妨尝试一下莫扎特和贝多芬的钢琴协奏曲，尤其是莫扎特的K.491和K.595，贝多芬的Op.37和Op.73，精彩绝伦，不输给他们任何的交响乐作品以及歌剧。你对中产气味古典主义模仿者勃拉姆斯充满轻视，对婆婆妈妈的柴可夫斯基只有厌烦。斯特劳斯里面只能听听理查·斯特劳斯，他的艺术歌曲还算有那么点思想性；至于约翰·斯特劳斯，天啊，真不知道这个家伙除开写了几首平庸的圆舞曲外还干了些什么。
-　　<br />你上知天文下知地理，对世界充满好奇心和求知欲，没事就到网上破解谣言。你三十好几找不到对象，去非诚勿扰相亲告诉人家“喜欢TBBT加分哦”，结果“可惜不是你，陪我到最后……”。你在粉丝面前表演Name Dropping的把戏大秀才艺，隔天一觉醒来照旧要加班熬夜做苦力，供房养车还利息。
-　　<br />你有知识有思想有文化有品位，唯独没有钱。你浑身上下散发着狐臭般无法抗拒的人格魅力，唯独没有活人鸟你。
-　　<br />装逼尚未成功，同志仍需努力。
-　　<br />你苦心智、劳筋骨、饿体肤，长夜痛哭算个屁，未曾坐过春运绿皮车者，不足以语人生。你比别人聪明你还比别人勤奋，你睡得比别人晚起得比别人早，你头发一天比一天少，肚子一天比一天大，鸡鸡一天比一天软。“吃得苦中苦，方装逼上逼”，皇天不负苦心装逼的人，你行业老大了，你商界精英了，你社会名流了，Finally, You did it, You DID it!
-　　<br />你实现了“财务上的自由”。你从不像其它男人一样热衷讨论好车，一般你的做法是：买一辆。不过，好车没什么值得炫耀的，车再好能好得过煤老板的？身为“中国知识新贵”的你，更喜欢邀请朋友到家里听自己两百万的Hi-End系统上播放的马勒和布鲁克纳。你听音室里的唱片的总价能买三辆奔驰，你用十三种工具调整自己唱机唱臂的位置，你告诉朋友，玩音响最关键的不是音源，也不是音箱，而是电：水电偏冷，火电偏暖，核电偏硬，你只用来自新疆阿克苏的风电，宽松醇厚。
-　　<br />你从微软跳到谷歌，最后弄个创新工场，做出了市面上最好的安卓盗版装机软件。你是中国的雷布斯，三千块市价的安卓手机你只卖两千块，除了一直缺货外，没什么不好的。
-　　<br />你从英国回来，都不用做学问搞研究，把民主的细节背诵一遍就当上了副教授。你出国就去冰岛，斯堪的纳维亚那块，北欧冰冷的气质才衬你高洁的内心，哦，对了，出门前记得把所有微博删掉。
-　　<br />你是央视主持人，你抑郁了，你又好了，你开着豪车到人民大会堂骂执政党的娘，骂完回台里继续主持读书节目；你血水盐水里泡过，说十句话引用八句名人名言，采访的时候总像只孵蛋的鹌鹑一样看着对方，你内心强大业务出众文笔一流，更要命的是，你还穷，谁敢不喜欢你简直天理难容。
-　　<br />你文学青年，你杂志主编，你说看不懂你小说的人是傻逼，看不懂你小说的人就是傻逼；你说文学有金线，文学就有金线。你眼光高，天底下看得上眼的东西就两样：美玉和鹌鹑。你率性随意，什么都可以将就，但避孕套一定要用最薄的。
-　　<br />你为民主民权民生摇旗呐喊，早年带老婆到天安门广场拍露逼照，直接则对城楼上的人像竖中指，好像很厉害的样子，可惜被查过一次账后就痿了，回来后一副受尽人间辛酸的萌样，像闰土一样四处找粉丝借钱，谁看谁心疼。
-　　<br />你老了，头发胡子花白，你归隐田园，深藏功与名。你心情不好就打个飞的去伦敦喂鸽子，去尼泊尔爬珠穆朗玛峰，心情好的时候就给干女儿做一盘难看但好吃的红烧肉。
-　　<br />你会当凌绝顶，一览众逼小。你再也不需要装逼，因为，你就是逼。
-　　<br />你安然地度过了一生，死后安葬在宁静的故乡，野花轻轻覆盖你的墓碑，上面镌刻的六个大字清晰可辨：
-　　<br />“活过，爱过，装过。”</p>
-
-
 		
-		
+		<a href="/blog/20130227/bu-xiang-zhuang-bi-de-sha-bi-bu-shi-hao-er-bi.html/" class="more-link">阅读全文;</a>
 	</div>
 
 

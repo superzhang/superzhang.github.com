@@ -4,7 +4,7 @@
   <title><![CDATA[分类Git | Castiel Blog]]></title>
   <link href="http://suerzhang.github.io/blog/categories/git/atom.xml" rel="self"/>
   <link href="http://suerzhang.github.io/"/>
-  <updated>2014-12-29T16:14:02+08:00</updated>
+  <updated>2014-12-29T20:42:33+08:00</updated>
   <id>http://suerzhang.github.io/</id>
   <author>
     <name><![CDATA[Castiel]]></name>
@@ -29,7 +29,7 @@ git config --global alias.br branch
 git config --global core.editor "mate -w"    # 设置Editor使用textmate
 git config -l  # 列举所有配置</code>
 用户的git配置文件~/.gitconfig
-
+<!--more-->
 Git常用命令
 查看、添加、提交、删除、找回，重置修改文件
 

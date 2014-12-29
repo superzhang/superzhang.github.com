@@ -4,7 +4,7 @@
   <title><![CDATA[Castiel Blog]]></title>
   <link href="http://suerzhang.github.io/atom.xml" rel="self"/>
   <link href="http://suerzhang.github.io/"/>
-  <updated>2014-12-29T16:14:00+08:00</updated>
+  <updated>2014-12-29T20:42:33+08:00</updated>
   <id>http://suerzhang.github.io/</id>
   <author>
     <name><![CDATA[Castiel]]></name>
@@ -47,7 +47,7 @@
 </span><span class="line"><span class="p">{</span><span class="o">%</span> <span class="n">endif</span> <span class="o">%</span><span class="p">}</span>
 </span></code></pre></td></tr></table></div></figure></notextile></div>
 
-<p>下方添<strong>加多说评论</strong>模块</p>
+<p>下方添<strong>加多说评论</strong>模块<!--more--></p>
 
 <div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
 <span class="line-number">2</span>
@@ -191,9 +191,11 @@
     <id>http://suerzhang.github.io/blog/20141213/tuo-yan-zheng</id>
     <content type="html"><![CDATA[<p>本来是想给博客换个主题，加点功能来着，拖延了一个礼拜，明天就要回去上班了，主题还是没换好。</p>
 
-<p>记录几个参考链接
-<a href="http://shengmingzhiqing.com/">郝海龙的github博客</a>
-<a href="http://www.ituring.com.cn/article/775">markdown语法说明</a></p>
+<p>记录几个参考链接</p>
+
+<p><a href="http://shengmingzhiqing.com/">郝海龙的github博客</a></p>
+
+<p><a href="http://www.ituring.com.cn/article/775">markdown语法说明</a></p>
 
 ]]></content>
   </entry>
@@ -220,9 +222,9 @@
     <link href="http://suerzhang.github.io/blog/20130813/yue-du-he-xie-zuo.html/"/>
     <updated>2013-08-13T15:28:00+08:00</updated>
     <id>http://suerzhang.github.io/blog/20130813/yue-du-he-xie-zuo</id>
-    <content type="html"><![CDATA[<p>iPad的出现，彻底打破了传统的阅读方式。我惊喜的发现这就是我想要的设备，在我还没有买iPhone的时候，我果断的入手了iPad1.虽然那时候的iPad是那么的笨重，屏幕只是那么的普通。但是那个尺寸，那个续航能力，那种体验是无法比拟的。甚至比我用mac电脑的感觉还要好。</p>
-
-<p>那时候用iPad看杂志、看书确实给我省了很多钱，很惭愧一直都看盗版的。还记得花钱买第一个正版的软件是字节社的《乔布斯传》其实并不能算是软件，却给我日后买正版软件的习惯打下了第一步。在windows上一直没有买软件的习惯，原来是没有吸引我的。当一个产品真正好的时候，用户还是会愿意花钱的。感谢乔布斯发明了app store，发明了iPad，发明了Mac。才会衍生出今天的字节社，多看，豆瓣阅读。没有一个好的阅读设备，这些虚拟的书城是没能那么繁荣的。</p>
+    <content type="html"><![CDATA[<p>iPad的出现，彻底打破了传统的阅读方式。我惊喜的发现这就是我想要的设备，在我还没有买iPhone的时候，我果断的入手了iPad1.虽然那时候的iPad是那么的笨重，屏幕只是那么的普通。但是那个尺寸，那个续航能力，那种体验是无法比拟的。甚至比我用mac电脑的感觉还要好。
+<!--more-->
+那时候用iPad看杂志、看书确实给我省了很多钱，很惭愧一直都看盗版的。还记得花钱买第一个正版的软件是字节社的《乔布斯传》其实并不能算是软件，却给我日后买正版软件的习惯打下了第一步。在windows上一直没有买软件的习惯，原来是没有吸引我的。当一个产品真正好的时候，用户还是会愿意花钱的。感谢乔布斯发明了app store，发明了iPad，发明了Mac。才会衍生出今天的字节社，多看，豆瓣阅读。没有一个好的阅读设备，这些虚拟的书城是没能那么繁荣的。</p>
 
 <p>我很喜欢买书，也喜欢看书，但是，更多的时候是买了书，然后放在那就是一年。而当我买了电子书以后，虽然以是长时间搁置，但是，有是，我会在睡觉的时候拿出iPad玩一下，然后就会打开阅读器看几页。在做火车的时候，我也不再只是听歌睡觉，也会拿出iPad看几页。当iPad mini的出现，更是提示了阅读的体验，尺寸和重量，无可比拟。我拥有了一台nexus 7。但是，总是觉得用起来很不爽。在用了一段时间之后还是入手了iPad mini。回顾这半年，买电子书也花了400左右了。豆瓣，字节社，多看都有买过。最早的时候很喜欢字节社，可以后来，感觉还是多看做的最好吧。</p>
 
@@ -248,9 +250,9 @@
 
 <p>花了10个月的时间做世界环游，途经非洲，东南亚，澳洲，中南美洲里的17个国家和地区。这次旅行的主题就是冲浪和摄影。
 出席在香港，日本，美国和伦敦举行的会议
-启程时给O’Reilly出版公司写了一本书，书名叫做《JavaScript Web Applications》</p>
-
-<p>另外写了一本关于CoffeeScript的书，很快就会由O’Reilly公司出版。
+启程时给O’Reilly出版公司写了一本书，书名叫做《JavaScript Web Applications》
+<!--more-->
+另外写了一本关于CoffeeScript的书，很快就会由O’Reilly公司出版。
 写了大量的开源库，例如Spine, Spine.Mobile, GFX, 和 Juggernaut.
 筹划了一个创业公司的框架
 出席伦敦2011FOWA会议
@@ -345,9 +347,9 @@
     <id>http://suerzhang.github.io/blog/20130404/lao-luo-,cui-zhui-zi-ke-ji-he-ta-de-qing-huai</id>
     <content type="html"><![CDATA[<p>昨天晚上把老罗的锤子科技rom发布会的官方视频看了下，跟之前的报道感觉完全不一样。图文的报道根本体现不出老罗的情怀。</p>
 
-<p>老罗说的好，在可以和人文的路上，我只看到了乔布斯的坟墓孤零零的立在那里。iPhone的出现，改变了我们的生活，改变了手机行业，改变了审美，改变了设计，也改变了我的人生。如果不是对iphone的喜欢，我估计还不知道去做什么。之前也尝试过做安卓的开发，但是，写了个hello world以后就放弃了。可以说给ios系统写程序也是一种享受。</p>
-
-<p>现在有多少公司能想老罗这样，能那么有情怀，能做出那么多细节的改进，那么多人性化的设计，为了这个rom，我都打算去尝试安卓的手机了，之前让我冲动的也只有小米，不过后来，鼓动室友买了，尝试了下，也就没入手了。安卓的体验还是比苹果差很多。</p>
+<p>老罗说的好，在可以和人文的路上，我只看到了乔布斯的坟墓孤零零的立在那里。iPhone的出现，改变了我们的生活，改变了手机行业，改变了审美，改变了设计，也改变了我的人生。如果不是对iphone的喜欢，我估计还不知道去做什么。之前也尝试过做安卓的开发，但是，写了个hello world以后就放弃了。可以说给ios系统写程序也是一种享受。
+<!--more-->
+现在有多少公司能想老罗这样，能那么有情怀，能做出那么多细节的改进，那么多人性化的设计，为了这个rom，我都打算去尝试安卓的手机了，之前让我冲动的也只有小米，不过后来，鼓动室友买了，尝试了下，也就没入手了。安卓的体验还是比苹果差很多。</p>
 
 <p>老罗说：他是在用生命说牛逼的人。我最近在思考，到底是个怎么样的经历，能出这么样的一个人，高中没毕业，去新东方学英语，然后任教，再出来自创英语培训，再创立锥子科技公司。你总会发现，他是越来越厉害，越来越让你欣赏佩服。</p>
 
@@ -371,7 +373,7 @@ git config --global alias.br branch
 git config --global core.editor "mate -w"    # 设置Editor使用textmate
 git config -l  # 列举所有配置</code>
 用户的git配置文件~/.gitconfig
-
+<!--more-->
 Git常用命令
 查看、添加、提交、删除、找回，重置修改文件
 
@@ -498,9 +500,9 @@ git branch --set-upstream develop origin/develop</code>
     <link href="http://suerzhang.github.io/blog/20130228/vimcha-jian-pei-zhi.html/"/>
     <updated>2013-02-28T21:06:00+08:00</updated>
     <id>http://suerzhang.github.io/blog/20130228/vimcha-jian-pei-zhi</id>
-    <content type="html"><![CDATA[<p>看到别人的博客介绍Vundle之前，我用Pathogen管理插件。Pathogen还算方便，只需要把相应插件，放在bundle目录下即可，不需要很复杂的设置，管理起来也一目了然，而且当第一次使用vim的时候，你会觉的很容易上手。</p>
-
-<p>感谢现在的互联网，能让我看到很多好的东西，能让我很容易能上手神奇vim，如果没有那么多插件，vim只能觉的很普通一样。Vundel的插件安装逻辑结构是这样的：</p>
+    <content type="html"><![CDATA[<p>看到别人的博客介绍Vundle之前，我用Pathogen管理插件。Pathogen还算方便，只需要把相应插件，放在bundle目录下即可，不需要很复杂的设置，管理起来也一目了然，而且当第一次使用vim的时候，你会觉的很容易上手。
+<!--more-->
+感谢现在的互联网，能让我看到很多好的东西，能让我很容易能上手神奇vim，如果没有那么多插件，vim只能觉的很普通一样。Vundel的插件安装逻辑结构是这样的：</p>
 
 <p>在Vim Script选好你想要的插件；
 在VIM的配置文件中写一句 Bundle plugin_name；
@@ -596,7 +598,7 @@ Bundle 'Valloric/YouCompleteMe'
     <updated>2013-02-27T22:02:00+08:00</updated>
     <id>http://suerzhang.github.io/blog/20130227/bu-xiang-zhuang-bi-de-sha-bi-bu-shi-hao-er-bi</id>
     <content type="html"><![CDATA[<p><a href="http://lihuazhi.com/561">原文</a>
-   <br />你受过良好的教育，有意无意间说起自己的大学，旁人无一例外纷纷投来艳羡目光。你工作光鲜，不是四大就是4A，不是垄断国企就是全球500强；在一个都是中国人的公司里互相叫对方英文名。你衣食无忧，三个月工资买一LV包；你生活清闲，上班时就像神九的航天员，明明啥事没干还要装出一副很忙的样子；你格调不俗，业余时间不是昆曲就是话剧，不是民谣专场就是妈妈咪呀；你善良正义，身处斗室，胸怀天下，每天吃饱饭就刷刷微博拯救中国。
+   <br />你受过良好的教育，有意无意间说起自己的大学，旁人无一例外纷纷投来艳羡目光。你工作光鲜，不是四大就是4A，不是垄断国企就是全球500强；在一个都是中国人的公司里互相叫对方英文名。你衣食无忧，三个月工资买一LV包；你生活清闲，上班时就像神九的航天员，明明啥事没干还要装出一副很忙的样子；你格调不俗，业余时间不是昆曲就是话剧，不是民谣专场就是妈妈咪呀；你善良正义，身处斗室，胸怀天下，每天吃饱饭就刷刷微博拯救中国。<!--more-->
 　　<br />你用苹果，买个五千块的马脸iPhone，又是贴膜又是镶钻，十天换八个壳；你用谷歌，买个两千块的安卓手机，又是S-OFF又是ROOT，十天刷八个ROM。你关注互联网，精通电子产品，上机锋网威锋网雷锋网，电脑里永远装着十个GTD软件八个思维导图软件，用Instagram记录生活，对乔布斯比对你爸还了解，以果粉自居并喜欢到论坛上问：iOS6完美越狱什么时候出来啊？
 　　<br />你发烧，你还发骚，出门带着IPC，用麻绳绑个随身耳放，再配一对ER4P入耳式耳塞，完全隔音，也不怕被车撞死。嫌不够惹眼？那就换一副时下最流行的魔声Beats Pro头戴式耳机，每一个苹果旗舰店的配件区里都有卖，它颜色鲜艳外形时尚，两个耳朵每边印着一个b，挂在你的头上，真是实至名归。
 　　<br />你叫自己“吃货”，可怜的娃从小在城里长大没吃过什么好东西，为了美食频道里推荐的坑爹路边摊，坐10块钱地铁从城南干到城北。你热爱美食，每次花十分钟炒菜，二十分钟摆盘，三十分钟拍照，拍好导进PhotoShop里用康熙字典体配上两句文言文，传到博客上豆瓣上微博上。
