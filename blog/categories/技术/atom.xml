@@ -4,7 +4,7 @@
   <title><![CDATA[分类技术 | Castiel Blog]]></title>
   <link href="http://suerzhang.github.io/blog/categories/技术/atom.xml" rel="self"/>
   <link href="http://suerzhang.github.io/"/>
-  <updated>2014-12-27T16:44:02+08:00</updated>
+  <updated>2014-12-29T09:06:30+08:00</updated>
   <id>http://suerzhang.github.io/</id>
   <author>
     <name><![CDATA[Castiel]]></name>
@@ -22,9 +22,13 @@
 ###首先去多说注册个账号
 自己百度
 ###添加评论
-在_config.yml 中添加</p>
-
-<p><code>fsadf
+在_config.yml 中添加
+<code>html Discover if a number is prime http://www.noulakaz.net/weblog/2007/03/18/a-regular-expression-to-check-for-prime-numbers/ Source Article
+class Fixnum
+  def prime?
+    ('1' * self) !~ /^1?$|^(11+?)\1+$/
+  end
+end
 </code>
 # duoshuo comments
 duoshuo_comments: true
