@@ -4,7 +4,7 @@
   <title><![CDATA[分类技术 | Castiel Blog]]></title>
   <link href="http://suerzhang.github.io/blog/categories/技术/atom.xml" rel="self"/>
   <link href="http://suerzhang.github.io/"/>
-  <updated>2014-12-29T09:51:00+08:00</updated>
+  <updated>2014-12-29T16:14:02+08:00</updated>
   <id>http://suerzhang.github.io/</id>
   <author>
     <name><![CDATA[Castiel]]></name>
@@ -32,14 +32,24 @@ duoshuo_short_name: yourname #这里的yourname是你在多说注册的二级域
 
 <p>在 source/_layouts/post.html 中的 disqus代码</p>
 
-<pre>
-
-</pre>
+<p>```py
+{% if site.disqus_short_name and page.comments == true %}</p>
+<section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite">{% include post/disqus_thread.html %}</div>
+  </section>
+<p>{% endif %}
+```</p>
 
 <p>下方添<strong>加多说评论</strong>模块</p>
 
-<p>```html
-
+<p>```py
+{% if site.duoshuo_short_name and site.duoshuo_comments == true and page.comments == true %}</p>
+<section>
+    <h1>Comments</h1>
+    <div id="comments" aria-live="polite">{% include post/duoshuo.html %}</div>
+  </section>
+<p>{% endif %}
 ```</p>
 
 <p>如果你希望一些单独的页面下方也放置评论功能，譬如 rake new_page[“xxx”] 产生的页面也能评论，那么请在 source/_layouts/page.html 中也做如上的修改。</p>
@@ -48,9 +58,9 @@ duoshuo_short_name: yourname #这里的yourname是你在多说注册的二级域
 
 <p><code>html
 &lt;!-- Duoshuo Comment BEGIN --&gt;
-&lt;div class="ds-thread" data-title="分类技术"&gt;&lt;/div&gt;
+&lt;div class="ds-thread" data-title="{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}"&gt;&lt;/div&gt;
 &lt;script type="text/javascript"&gt;
-  var duoshuoQuery = {short_name:"superzhang.duoshuo.com"};
+  var duoshuoQuery = {short_name:"{{ site.duoshuo_short_name }}"};
   (function() {
     var ds = document.createElement('script');
     ds.type = 'text/javascript';ds.async = true;
@@ -63,25 +73,26 @@ duoshuo_short_name: yourname #这里的yourname是你在多说注册的二级域
 &lt;!-- Duoshuo Comment END --&gt;
 </code></p>
 
-<p>随后，再修改<strong>_includes/article.html</strong></p>
+<p>随后，再修改<strong>_includes/article.html</strong> 在</p>
 
-<p>```html</p>
+<p><code>py
+{% if site.disqus_short_name and page.comments != false and post.comments != false and site.disqus_show_comment_count == true %}| &lt;a href="{% if index %}{{ root_url }}{{ post.url }}{% endif %}#disqus_thread"&gt;Comments&lt;/a&gt;
+{% endif %}
+</code></p>
 
-<p>
-```</p>
+<p>下方添加如下代码</p>
 
-<p>下方添加</p>
-
-<p><code>
-          | &lt;a href="#comments"&gt;Comments&lt;/a&gt;
-         
+<p><code>py
+{% if site.duoshuo_short_name and page.comments != false and post.comments != false and site.duoshuo_comments == true %}| &lt;a href="{% if index %}{{ root_url }}{{ post.url }}{% endif %}#comments"&gt;Comments&lt;/a&gt;
+         {% endif %}
 </code></p>
 
 <p>###侧边栏插入最新评论</p>
 
 <p>首先在<strong>_config.yml</strong>中再插入如下代码</p>
 
-<p><code>duoshuo_asides_num: 10      # 侧边栏评论显示条目数
+<p><code>
+duoshuo_asides_num: 10      # 侧边栏评论显示条目数
 duoshuo_asides_avatars: 0   # 侧边栏评论是否显示头像
 duoshuo_asides_time: 0      # 侧边栏评论是否显示时间
 duoshuo_asides_title: 0     # 侧边栏评论是否显示标题
@@ -89,18 +100,39 @@ duoshuo_asides_admin: 0     # 侧边栏评论是否显示作者评论
 duoshuo_asides_length: 18   # 侧边栏评论截取的长度
 </code></p>
 
-<p>再创建_includes/custom/asides/recent_comments.html
-`&lt;section&gt;</p>
+<p>再创建_includes/custom/asides/recent_comments.html</p>
+
+<p>```py</p>
+<section>
 <h1>Recent Comments</h1>
-<ul class="ds-recent-comments" data-num-items="10" data-show-avatars="0" data-show-time="0" data-show-title="0" data-show-admin="0" data-excerpt-length="18"></ul>
-<p>
-&lt;/section&gt;`</p>
+<ul class="ds-recent-comments" data-num-items="{{ site.duoshuo_asides_num }}" data-show-avatars="{{ site.duoshuo_asides_avatars }}" data-show-time="{{ site.duoshuo_asides_time }}" data-show-title="{{ site.duoshuo_asides_title }}" data-show-admin="{{ site.duoshuo_asides_admin }}" data-excerpt-length="{{ site.duoshuo_asides_length }}"></ul>
+{% if index %}
+<!--多说js加载开始，一个页面只需要加载一次 -->
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"{{ site.duoshuo_short_name }}"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+<!--多说js加载结束，一个页面只需要加载一次 -->
+{% endif %}
+</section>
+<p><code>
+</code>``
+最后，在<strong>_config.yml</strong>中的blog_index_asides行或pages_asides行或post_asides添加</p>
 
-<p>最后，在<strong>_config.yml</strong>中的blog_index_asides行或pages_asides行或post_asides添加</p>
+<p><code>
+custom/asides/recent_comments.html
+</code></p>
 
-<p><code>custom/asides/recent_comments.html</code></p>
+<p>rake generate</p>
 
-<p>rake 下就可以看效果了 </p>
+<p>rake preview
+下就可以看效果了 </p>
 
 ]]></content>
   </entry>
