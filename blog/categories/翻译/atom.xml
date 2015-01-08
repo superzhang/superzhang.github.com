@@ -4,7 +4,7 @@
   <title><![CDATA[分类翻译 | Castiel Blog]]></title>
   <link href="http://suerzhang.github.io/blog/categories/翻译/atom.xml" rel="self"/>
   <link href="http://suerzhang.github.io/"/>
-  <updated>2015-01-08T16:47:32+08:00</updated>
+  <updated>2015-01-08T17:07:04+08:00</updated>
   <id>http://suerzhang.github.io/</id>
   <author>
     <name><![CDATA[Castiel]]></name>
@@ -20,7 +20,7 @@
     <id>http://suerzhang.github.io/blog/20150108/from go to python</id>
     <content type="html"><![CDATA[<p>翻译练习  原文链接（https://tech.dropbox.com/2014/07/open-sourcing-our-go-libraries/）</p>
 
-<p>Dropbox的成功很大一部分来自有Python，python这门语言使我们能够重复和快速开发语言。但是，随着我们的基础设施的成熟，以支持我们日益增长的用户群，我们开始探索如何扩大我们的系统，以更有效的方式。大约一年前，我们决定从后端的Python迁移到Go去更好的支持并发和更快的执行速度。这是一个巨大的努力，约20万行代码依靠一个很小的开发团队。在这一点上，我们已经成功地搬到我们的基础设施的主要部分去。</p>
+<p>Dropbox的成功很大一部分来自有Python，python这门语言使我们能够重复和快速开发语言。但是，随着我们的基础设施的成熟，以支持我们日益增长的用户群，我们开始探索如何扩大我们的系统，以更有效的方式。大约一年前，我们决定在底层架构上从Python迁移到Go去更好的支持并发和更快的执行速度。这是一个巨大的努力，约20万行代码依靠一个很小的开发团队。在这一点上，我们已经成功地搬到我们的基础设施的主要部分去。</p>
 
 <p>阻碍我们发展进步的一个反复出现的主题是缺乏必要建设大型系统强大的库。这并不奇怪，因为Go仍然是一个非常年轻的语言。为了解决这个问题，我们的团队开始构建各种库，以提供更好的抽象，比如连接管理和memcache的客户端。我们很高兴地宣布，我们开源出这些库，以帮助更广泛的社区建立大规模生产体系。</p>
 
