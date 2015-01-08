@@ -4,7 +4,7 @@
   <title><![CDATA[Castiel Blog]]></title>
   <link href="http://suerzhang.github.io/atom.xml" rel="self"/>
   <link href="http://suerzhang.github.io/"/>
-  <updated>2015-01-08T17:07:04+08:00</updated>
+  <updated>2015-01-08T17:08:00+08:00</updated>
   <id>http://suerzhang.github.io/</id>
   <author>
     <name><![CDATA[Castiel]]></name>
@@ -19,6 +19,10 @@
     <updated>2015-01-08T16:30:00+08:00</updated>
     <id>http://suerzhang.github.io/blog/20150108/from go to python</id>
     <content type="html"><![CDATA[<p>翻译练习  原文链接（https://tech.dropbox.com/2014/07/open-sourcing-our-go-libraries/）</p>
+
+<p>Dropbox owes a large share of its success to Python, a language that enabled us to iterate and develop quickly. However, as our infrastructure matures to support our ever growing user base, we started exploring ways to scale our systems in a more efficient manner. About a year ago, we decided to migrate our performance-critical backends from Python to Go to leverage better concurrency support and faster execution speed. This was a massive effort–around 200,000 lines of Go code–undertaken by a small team of engineers. At this point, we have successfully moved major parts of our infrastructure to Go.</p>
+
+<p>One recurring theme that hindered our development progress was the lack of robust libraries needed for building large systems. This is not surprising since Go is still a very young language. To address this issue, our team started building various libraries to provide better abstractions, such as connection management and a memcache client. We are very excited to announce that we are open sourcing these libraries to help the broader community build large scale production systems.</p>
 
 <p>Dropbox的成功很大一部分来自有Python，python这门语言使我们能够重复和快速开发语言。但是，随着我们的基础设施的成熟，以支持我们日益增长的用户群，我们开始探索如何扩大我们的系统，以更有效的方式。大约一年前，我们决定在底层架构上从Python迁移到Go去更好的支持并发和更快的执行速度。这是一个巨大的努力，约20万行代码依靠一个很小的开发团队。在这一点上，我们已经成功地搬到我们的基础设施的主要部分去。</p>
 
