@@ -1,0 +1,189 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>from python to go - Castiel Blog</title>
+	<meta name="author" content="Castiel">
+
+	
+	<meta name="description" content="翻译练习 原文链接（https://tech.dropbox.com/2014/07/open-sourcing-our-go-libraries/） Dropbox的成功很大一部分来自有Python，python这门语言使我们能够重复和快速开发语言。但是，随着我们的基础设施的成熟， &hellip;">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link href="/atom.xml" rel="alternate" title="Castiel Blog" type="application/atom+xml">
+	<link rel="canonical" href="">
+	<link href="/favicon.png" rel="shortcut icon">
+	<link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	<script async="true" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	
+</head>
+
+
+<body>
+	<header id="header" class="inner"><h1><a href="/">Castiel Blog</a></h1>
+<nav id="main-nav"><ul class="main">
+	<li><a href="/">主页</a></li>
+	<li><a href="/blog/archives">分类</a></li>
+</ul>
+</nav>
+<nav id="mobile-nav">
+	<div class="alignleft menu">
+		<a class="button">Menu</a>
+		<div class="container"><ul class="main">
+	<li><a href="/">主页</a></li>
+	<li><a href="/blog/archives">分类</a></li>
+</ul>
+</div>
+	</div>
+	<div class="alignright search">
+		<a class="button"></a>
+		<div class="container">
+			<form action="http://google.com/search" method="get">
+				<input type="text" name="q" results="0">
+				<input type="hidden" name="q" value="site:suerzhang.github.io">
+			</form>
+		</div>
+	</div>
+</nav>
+<nav id="sub-nav" class="alignright">
+	<div class="social">
+		
+		
+		
+		<a class="twitter" href="http://twitter.com/superupon" title="Twitter">Twitter</a>
+		
+		
+		<a class="github" href="https://github.com/superzhang" title="GitHub">GitHub</a>
+		
+    
+		
+		
+		
+		
+		
+		<a class="rss" href="/atom.xml" title="RSS">RSS</a>
+		
+    
+	</div>
+	<form class="search" action="http://google.com/search" method="get">
+		<input class="alignright" type="text" name="q" results="0">
+		<input type="hidden" name="q" value="site:suerzhang.github.io">
+	</form>
+</nav>
+
+</header>
+	
+		
+<div id="banner" class="inner">
+	<div class="container">
+		<ul class="feed"></ul>
+	</div>
+	<small><a href="http://twitter.com/superupon">superupon</a> @ <a href="http://twitter.com">Twitter</a></small>
+	<div class="loading">Loading...</div>
+</div>
+<script src="/javascripts/twitter.js"></script>
+<script type="text/javascript">
+	(function($){
+		$('#banner').getTwitterFeed('superupon', 1, false);
+	})(jQuery);
+</script>
+
+	
+	<div id="content" class="inner"><article class="post">
+	<h2 class="title">From Python to Go</h2>
+	<div class="entry-content"><p>翻译练习  原文链接（https://tech.dropbox.com/2014/07/open-sourcing-our-go-libraries/）</p>
+
+<p>Dropbox的成功很大一部分来自有Python，python这门语言使我们能够重复和快速开发语言。但是，随着我们的基础设施的成熟，以支持我们日益增长的用户群，我们开始探索如何扩大我们的系统，以更有效的方式。大约一年前，我们决定从后端的Python迁移到Go去更好的支持并发和更快的执行速度。这是一个巨大的努力，约20万行代码依靠一个很小的开发团队。在这一点上，我们已经成功地搬到我们的基础设施的主要部分去。</p>
+
+<p>阻碍我们发展进步的一个反复出现的主题是缺乏必要建设大型系统强大的库。这并不奇怪，因为Go仍然是一个非常年轻的语言。为了解决这个问题，我们的团队开始构建各种库，以提供更好的抽象，比如连接管理和memcache的客户端。我们很高兴地宣布，我们开源出这些库，以帮助更广泛的社区建立大规模生产体系。</p>
+
+</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-01-08T16:30:00+08:00" pubdate data-updated="true">Jan 8<span>th</span>, 2015</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/翻译/'>翻译</a>
+
+
+</div>
+	
+    
+     <a href="#comments">Comments</a>
+              "
+        
+
+</div>
+</article>
+
+	<div class="share">
+	<div class="addthis_toolbox addthis_default_style ">
+		
+		
+		<a class="addthis_button_tweet"></a>
+		
+		
+		
+	</div>
+	
+</div>
+
+
+
+
+  <section>
+      <h1>Comments</h1>
+          <div id="comments" aria-live="polite"><!-- Duoshuo Comment BEGIN -->
+<div class="ds-thread" data-title="From Python to Go"></div>
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"superzhang"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = 'http://static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script>
+ <!-- Duoshuo Comment END -->
+</div>
+  </section>
+ 
+</div>
+	<footer id="footer" class="inner">Copyright &copy; 2015
+
+    Castiel
+
+</footer>
+	<script src="/javascripts/slash.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
+</script> <!-- Delete or comment this line to disable Fancybox -->
+
+
+
+
+
+
+</body>
+</html>

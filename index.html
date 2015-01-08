@@ -7,9 +7,7 @@
 	<meta name="author" content="Castiel">
 
 	
-	<meta name="description" content="原文地址 关于合伙：一篇15000字的案例复盘
-2014-11-14 乐纯的伙伴们
-文/@奶牛Denny 作为理解此案例复盘的基础，请点击最下方的“阅读原文”，阅读两篇短小但有价值的前文：《人和处境》和《咖啡馆的错觉》。否则你可能会觉得很奇怪。（如果你是因为朋友圈分享不小心进入到这个案例中来的 &hellip;">
+	<meta name="description" content="翻译练习 原文链接（https://tech.dropbox.com/2014/07/open-sourcing-our-go-libraries/） Dropbox的成功很大一部分来自有Python，python这门语言使我们能够重复和快速开发语言。但是，随着我们的基础设施的成熟， &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -94,6 +92,59 @@
 
 	
 	<div id="content" class="inner">
+
+
+    <article class="post">
+	<h2 class="title">
+		
+		<a href="/blog/20150108/from+go+to+python.html/">
+		
+			From Python to Go</a>
+	</h2>
+	<div class="entry-content">
+		<p>翻译练习  原文链接（https://tech.dropbox.com/2014/07/open-sourcing-our-go-libraries/）</p>
+
+<p>Dropbox的成功很大一部分来自有Python，python这门语言使我们能够重复和快速开发语言。但是，随着我们的基础设施的成熟，以支持我们日益增长的用户群，我们开始探索如何扩大我们的系统，以更有效的方式。大约一年前，我们决定从后端的Python迁移到Go去更好的支持并发和更快的执行速度。这是一个巨大的努力，约20万行代码依靠一个很小的开发团队。在这一点上，我们已经成功地搬到我们的基础设施的主要部分去。</p>
+
+<p>阻碍我们发展进步的一个反复出现的主题是缺乏必要建设大型系统强大的库。这并不奇怪，因为Go仍然是一个非常年轻的语言。为了解决这个问题，我们的团队开始构建各种库，以提供更好的抽象，比如连接管理和memcache的客户端。我们很高兴地宣布，我们开源出这些库，以帮助更广泛的社区建立大规模生产体系。</p>
+
+
+		
+		
+	</div>
+
+
+<div class="meta">
+	<div class="date">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-01-08T16:30:00+08:00" pubdate data-updated="true">Jan 8<span>th</span>, 2015</time></div>
+	<div class="tags">
+
+
+	<a class='category' href='/blog/categories/翻译/'>翻译</a>
+
+
+</div>
+	
+    
+     <a href="{
+        root_url }}{
+         post.url }}#comments">Comments</a>
+              &#8221;
+        
+
+</div>
+</article>
 
 
     <article class="post">
@@ -601,64 +652,6 @@
 
 
 	<a class='category' href='/blog/categories/科技/'>科技</a>
-
-
-</div>
-	
-    
-     <a href="{
-        root_url }}{
-         post.url }}#comments">Comments</a>
-              &#8221;
-        
-
-</div>
-</article>
-
-
-    <article class="post">
-	<h2 class="title">
-		
-		<a href="/blog/20130309/git-chang-yong-ming-ling-bei-wang.html/">
-		
-			Git 常用命令备忘</a>
-	</h2>
-	<div class="entry-content">
-		<p>Git配置</p>
-<pre><code>git config --global user.name "robbin"   
-git config --global user.email "fankai@gmail.com"
-git config --global color.ui true
-git config --global alias.co checkout
-git config --global alias.ci commit
-git config --global alias.st status
-git config --global alias.br branch
-git config --global core.editor "mate -w"    # 设置Editor使用textmate
-git config -l  # 列举所有配置</code>
-用户的git配置文件~/.gitconfig
-
-		
-		<a href="/blog/20130309/git-chang-yong-ming-ling-bei-wang.html/" class="more-link">阅读全文;</a>
-	</div>
-
-
-<div class="meta">
-	<div class="date">
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-03-09T17:17:00+08:00" pubdate data-updated="true">Mar 9<span>th</span>, 2013</time></div>
-	<div class="tags">
-
-
-	<a class='category' href='/blog/categories/git/'>Git</a>
 
 
 </div>
