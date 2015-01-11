@@ -4,7 +4,7 @@
   <title><![CDATA[Castiel Blog]]></title>
   <link href="http://suerzhang.github.io/atom.xml" rel="self"/>
   <link href="http://suerzhang.github.io/"/>
-  <updated>2015-01-11T15:07:40+08:00</updated>
+  <updated>2015-01-11T15:29:02+08:00</updated>
   <id>http://suerzhang.github.io/</id>
   <author>
     <name><![CDATA[Castiel]]></name>
@@ -12,6 +12,29 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[octopress博客搭建和个性化配置]]></title>
+    <link href="http://suerzhang.github.io/blog/20150111/octopressbo-ke-da-jian-he-ge-xing-hua-pei-zhi.html/"/>
+    <updated>2015-01-11T15:23:00+08:00</updated>
+    <id>http://suerzhang.github.io/blog/20150111/octopressbo-ke-da-jian-he-ge-xing-hua-pei-zhi</id>
+    <content type="html"><![CDATA[<p>网上看到很多介绍octopress博客搭建的文章，最近自己也在修改样式和个性化配置。留一个别人写的挺不错的文章</p>
+
+<h3 id="section">从新电脑上恢复博客内容：</h3>
+<p>如果电脑重装了系统，或者要在另一台电脑编写博客，可以这样设置。
+找到博客仓库的url，执行</p>
+
+<p><code>git clone -b source (url) octopress   #把source 克隆到本地octopress目录上
+cd octopress
+git clone (url) _deploy   #克隆master分支，它存放着博客内容。
+gem install bundler
+bundle install
+rake install
+rake setup_github_pages</code></p>
+
+<h5 id="octopresshttpwwwjianshucomp0ac2ac1a8e45">octopress博客搭建和个性化配置<a href="http://www.jianshu.com/p/0ac2ac1a8e45">原文链接</a>(@简书)</h5>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[from python to go]]></title>
