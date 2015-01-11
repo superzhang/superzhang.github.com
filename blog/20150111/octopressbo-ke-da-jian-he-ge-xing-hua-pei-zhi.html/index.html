@@ -9,7 +9,14 @@
 	
 	<meta name="description" content="网上看到很多介绍octopress博客搭建的文章，最近自己也在修改样式和个性化配置。留一个别人写的挺不错的文章 从新电脑上恢复博客内容：
 如果电脑重装了系统，或者要在另一台电脑编写博客，可以这样设置。
-找到博客仓库的url，执行 git clone -b source (url) &hellip;">
+找到博客仓库的url，执行 1
+2
+3
+4
+5
+6
+7
+git clone -b source &hellip;">
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -103,13 +110,20 @@
 <p>如果电脑重装了系统，或者要在另一台电脑编写博客，可以这样设置。
 找到博客仓库的url，执行</p>
 
-<pre>git clone -b source (url) octopress   #把source 克隆到本地octopress目录上
-cd octopress
-git clone (url) _deploy   #克隆master分支，它存放着博客内容。
-gem install bundler
-bundle install
-rake install
-rake setup_github_pages</pre>
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">git clone -b source (url) octopress   #把source 克隆到本地octopress目录上
+</span><span class="line">cd octopress
+</span><span class="line">git clone (url) _deploy   #克隆master分支，它存放着博客内容。
+</span><span class="line">gem install bundler
+</span><span class="line">bundle install
+</span><span class="line">rake install
+</span><span class="line">rake setup_github_pages</span></code></pre></td></tr></table></div></figure></notextile></div>
 
 <h5 id="octopresshttpwwwjianshucomp0ac2ac1a8e45">octopress博客搭建和个性化配置<a href="http://www.jianshu.com/p/0ac2ac1a8e45">原文链接</a>(@简书)</h5>
 </div>
