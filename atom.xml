@@ -4,7 +4,7 @@
   <title><![CDATA[Castiel Blog]]></title>
   <link href="http://suerzhang.github.io/atom.xml" rel="self"/>
   <link href="http://suerzhang.github.io/"/>
-  <updated>2015-01-11T15:06:00+08:00</updated>
+  <updated>2015-01-11T15:07:40+08:00</updated>
   <id>http://suerzhang.github.io/</id>
   <author>
     <name><![CDATA[Castiel]]></name>
@@ -12,15 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[d]]></title>
-    <link href="http://suerzhang.github.io/blog/20150111/d.html/"/>
-    <updated>2015-01-11T15:02:00+08:00</updated>
-    <id>http://suerzhang.github.io/blog/20150111/d</id>
-    <content type="html"><![CDATA[
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[from python to go]]></title>
